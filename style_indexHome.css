@@ -1,0 +1,254 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    margin: 0%;
+    background-image: url(/Imagenes/fondo_index.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+
+}
+
+
+nav.containerEncabezado{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    padding: 20px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+div.servicios{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 21px;
+}
+
+.enlaceSinSubrayado{
+    width: 100%;
+    padding-left: 10px;
+    text-decoration: none;
+    color:#003746;
+}
+
+.enlaceSinSubrayado:hover{
+    color: #008DB1;
+    font-size: 125%;
+
+}
+
+.logoInicial img{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+div.inicioSesion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 21px;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+}
+
+div.container{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.titulo1{
+  font-size: 50px;
+  color: #003746;
+  padding: 0 0 30px 0;
+  text-shadow: #fff 5px 0 8px;
+}
+
+div.options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+  
+.option {
+  display: inline-block;
+  margin-right: 10px;
+}
+  
+.option input[type="radio"] {
+  display: none;
+}
+  
+.button {
+  display: inline-block;
+  width: 70px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+  position:  relative;
+  background-color: rgba(0, 0, 0, 0.541);
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: .3s ease;
+  color: #ffffff;
+  border: 2px solid #fff;
+  border-radius: 32px;
+  z-index: -1;
+}
+  
+  #venta:checked + .button,
+  #alquiler:checked + .button {
+    background-color: #004E63;
+    color: white;
+  }
+  
+  div.search{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  #search{
+    width: 400px;
+    padding: 10px;
+    border: 2px #ffffff solid;
+    border-radius: 35px;
+  }
+
+  input[type="submit"] {
+    background-color: #004E63;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+  }
+
+  input[type="submit"]:hover{
+    background-color: #008DB1;
+  }
+
+  div.envoltura  {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px;
+    padding: 20px;
+  }
+
+  div.header-text h2{
+    color: #003746;
+    font-size: 30px;
+  }
+
+  div.container-slider{
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .slider-Wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  div.slider-item {
+    flex: 0 0 auto;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    align-items: center;
+  }
+
+  div.slider-item img{
+    width: 300px;
+    height: 300px;
+  }
+
+  div.container-redes-sociales{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  div.container-izquierdo{
+    width: 50%;
+  }
+
+  div.logo-footer{
+    
+    margin: 20px 0 10px 40px;
+  }
+
+  div.text-redes{
+    margin: 0 0 0 40px;
+    color: #003746;
+  }
+
+  div.Redes{
+    margin: 0 0 0 30px;
+  }
+  div.Redes img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  div.container-derecho{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+
+  }
+
+  div.contenido{
+  
+    margin: 20px 60px 0 0;
+  }
+
+  div.contenido h3{
+    flex: display;
+    justify-content: center;
+    align-items: center;
+    color: #003746;
+    font-size: 20px;
+  }
+
+  div.contenido ul{
+    display: grid;
+    align-items: center;
+    list-style: none;
+    padding-inline-start: 0;
+  }
+
+  div.contenido a{
+    font-size: 18px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: #003746;
+  }
+
+
+  div.copyrigth{
+    display: flex;
+    justify-content: center;
+    margin: 0  0 20px 0;
+  }
