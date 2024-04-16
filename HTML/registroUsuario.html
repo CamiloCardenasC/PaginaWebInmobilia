@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="/HTML/style_registroUsuario.css">
+    <link rel="stylesheet" href="">
+    <link rel="icon" href="/Imagenes/LOGO/logoPestaña.ico">
+</head>
+<body>
+    <Div class="Container-Registrarse">
+        <div class="container-izquierdo">
+                <h1>Registrarse</h1>
+                
+                <form action="registrase">
+                    <div class="usuarioRegistro">
+                        <label for="userName">* Nombre</label>
+                        <input type="text" id="userName" name="userName" placeholder="Escriba su nombre" required>
+                        
+                    </div>
+                    <div class="usuarioRegistro">
+                        <label for="userName">* Apellidos</label>
+                        <input type="text" id="Apellidos" name="Apellidos" placeholder="Escriba sus Apellidos" required>
+                    
+                    </div>
+                    <div class="usuarioRegistro">
+                        <label for="telefono">* telefono/Movil</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="xxx-xxx-xxxx" required>
+                        
+                    </div>
+                    <div class="usuarioRegistro">
+                        <label for="email">* Correo electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="example@dominio.com" required>
+                        
+                    </div>
+                    <div class="usuarioRegistro">
+                        <label for="contraseña">* Contraseña</label>
+                        <input type="password" id="password" name="password" required>
+
+                    </div>
+                    <div class="usuarioRegistro">
+                        <label for="contraseña">* Confirmar contraseña</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="textContraseña">
+                        <p>7 caracteres como mínimo con al menos una letra y un número, 
+                            sensible a mayúsculas y minúsculas. Caracteres especiales 
+                            permitidos: @ # $% ^ & + =!</p>
+                    </div>
+
+
+                    <div class="buttonRegistrarse">
+                        <button type="submit" class="resgistrarse"><strong>Registrarse</strong></button>
+                    </div>
+                </form> 
+                <div class="iniciar">
+                    <p>¿Ya tienes una cuenta?</p>
+                    <p><a href="/HTML/InicioSesion.html">Iniciar Sesión</a></p>
+                </div>
+        </div>
+        <div class="container-Derecho">
+        </div>
+    </Div>  
+</body>
+</html>

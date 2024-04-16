@@ -4,7 +4,7 @@ html {
 body {
     min-height: 100%;
     margin: 0%;
-    background-image: url(/Imagenes/fondo_index.jpg);
+    background-image: url(/Imagenes/FondosPantalla/fondo_index.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -13,11 +13,10 @@ header{
     overflow: hidden;
     position: fixed;
     width: 100%;
-
 }
 
 
-nav.containerEncabezado{
+div.containerEncabezado{
     display: flex;
     justify-content: space-around;
     justify-items: center;
@@ -42,7 +41,7 @@ div.servicios{
 
 .enlaceSinSubrayado:hover{
     color: #008DB1;
-    font-size: 125%;
+
 
 }
 
