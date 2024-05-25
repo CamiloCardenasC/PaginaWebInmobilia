@@ -25,6 +25,23 @@ body{
     width: 450px;
 
 }
+.arrow-back-container {
+    position: absolute;
+    top: 5%;
+    left: 94%;
+}
+
+.arrow-back {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #003746;
+}
 
 .container-izquierdo h1{
     color: #003746;
