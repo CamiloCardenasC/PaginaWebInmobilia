@@ -12,11 +12,13 @@ import java.io.Serializable;
  * @author kmilo
  */
 
+//Especifica que la clase definida es una Entity Class
 @Entity
 public class Cargo implements Serializable {
     
+    //Permite definir que el idCargo sera la Primary Key al ser mappeado
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//Define se generara automaticamente
     private int idCargo;
     
     private String cargo;
@@ -26,9 +28,11 @@ public class Cargo implements Serializable {
     @OneToOne
     private Empleado empleado;
 
+    //Constructor vacio
     public Cargo() {
     }
-
+    
+    //Constructor con parametros
     public Cargo(int idCargo, String cargo, String descripcionCargo, Empleado empleado) {
         this.idCargo = idCargo;
         this.cargo = cargo;
@@ -36,6 +40,7 @@ public class Cargo implements Serializable {
         this.empleado = empleado;
     }
 
+    //Getter y Setter
     public int getIdCargo() {
         return idCargo;
     }

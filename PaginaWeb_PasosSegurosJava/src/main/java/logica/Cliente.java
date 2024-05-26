@@ -13,6 +13,7 @@ import java.util.List;
  *
  * @author kmilo
  */
+//Especifica que la clase definida es una Entity Class
 @Entity
 public class Cliente extends Persona implements Serializable{
     
@@ -24,13 +25,16 @@ public class Cliente extends Persona implements Serializable{
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL) //Especifica que el atributo cliente en Contrato es el propietario de la relación.
     private List<Contrato> contrato;
     
-    @OneToOne(cascade = CascadeType.ALL)
+    //Define que un cliente solo puede tener un solo usuario
+    @OneToOne(cascade = CascadeType.ALL) //Cascade define que todas las acciones que se realicen con el objeto principal debe repetirse para todos los objetos.
     @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
     private Usuario usuario;
 
+    //Constructor Vacio
     public Cliente() {
     }
 
+    //Constructor con parametros
     public Cliente(List<Reservacion> reservacion, List<Contrato> contrato, Usuario usuario, int idPersona, String nombrePersona, String apellidosPersona, Date fechaNacimiento, String telefonoPersona, String correoElectronico, String password) {
         super(idPersona, nombrePersona, apellidosPersona, fechaNacimiento, telefonoPersona, correoElectronico, password);
         this.reservacion = reservacion;
@@ -38,6 +42,7 @@ public class Cliente extends Persona implements Serializable{
         this.usuario = usuario;
     }
 
+    //Getter y Setter
     public List<Reservacion> getReservacion() {
         return reservacion;
     }

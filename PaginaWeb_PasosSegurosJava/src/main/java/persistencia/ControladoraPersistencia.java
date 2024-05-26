@@ -8,6 +8,7 @@ import logica.Cliente;
  */
 public class ControladoraPersistencia {
     
+    //Se instancian todas las Entity Class
     CargoJpaController cargoJPA = new CargoJpaController();
     ClienteJpaController clienJPA = new ClienteJpaController();
     ContratoJpaController contraJPA = new ContratoJpaController();
@@ -22,9 +23,11 @@ public class ControladoraPersistencia {
     TipoInmuebleJpaController tipoInmueJPA = new TipoInmuebleJpaController();
     UsuarioJpaController usuaJPA = new UsuarioJpaController();
 
+    //Constructor vacio
     public ControladoraPersistencia() {
     }
     
+    //Metodo para crear cliente
     public void crearCliente(Cliente cliente){
         clienJPA.create(cliente);
     }

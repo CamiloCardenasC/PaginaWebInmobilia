@@ -1,6 +1,5 @@
 package logica;
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +17,7 @@ import java.util.Date;
  *
  * @author kmilo
  */
-
+//Especifica que la clase definida es una Entity Class
 @Entity
 public class Contrato implements Serializable {
     

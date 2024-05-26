@@ -76,6 +76,7 @@ public class SvRegistroCliente extends HttpServlet {
         //Persistir el cliente y el usuario
         control.crearCliente(cliente);
         
+        //Se redirije a la pagina de Inicio
         response.sendRedirect("Home.jsp");
     }
 

@@ -26,7 +26,7 @@ public class Usuario implements Serializable {
     private String password;
     
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "fechaRegistro", updatable = false, nullable = false)
+    @Column(name = "fechaRegistro", updatable = false, nullable = false)//Se nombra la columna, update false es para evitar que se actualice y evitar que sea null
     private Date fechaRegistro;
     
     
