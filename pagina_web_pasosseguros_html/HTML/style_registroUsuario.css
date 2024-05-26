@@ -46,11 +46,10 @@ body{
 
 .container-izquierdo h1{
     color: #003746;
-    padding: 10px 0 10px 0;
 }
 
 .container-izquierdo form{
-    padding: 0 40px;
+    padding: 0 30px;
     box-sizing: border-box;
 }
 
@@ -72,7 +71,7 @@ body{
 
 .textContraseña{
     color: #546b70;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .buttonRegistrarse button{

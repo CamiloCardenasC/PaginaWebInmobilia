@@ -136,32 +136,32 @@
                 <div class="contenido">
                     <h3>INICIO</h3>
                     <ul class="list-contenido">
-                        <a href="#"><li>Compra</li></a>
-                        <a href=""><li>Alquiler</li></a>
+                        <li><a href="#">Compra</a></li>
+                        <li><a href="#">Alquiler</a></li>
                     </ul>
                 </div>
                 <div class="contenido">
                     <h3>SERVICIOS</h3>
                     <ul class="list-contenido">                        
-                        <a href=""><li>Asesiramiento Legal</li></a>
+                        <li><a href="#">Asesiramiento Legal</a></li>
                     </ul>  
                 </div>
                 <div class="contenido">
                     <h3>NOSOTROS</h3>
                     <ul class="list-contenido">
-                        <a href="#"><li>Equipo</li></a>
-                        <a href="#"><li>Misión</li></a>
-                        <a href="#"><li>Visión</li></a>
-                        <a href="#"><li>Historia</li></a>
-                        <a href="#"><li>Testimonios</li></a>
+                        <li><a href="#">Equipo</a></li>
+                        <li><a href="#">Misión</a></li>
+                        <li><a href="#">Visión</a></li>
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Testimonios</a></li>
                     </ul>
                 </div>
                 <div class="contenido">
                     <h3>CONTACTO</h3>
                     <ul class="list-contenido">
-                        <a href="#"><li>Servicio al Cliente</li></a>
-                        <a href="#"><li>Formulario de Contacto</li></a>
-                        <a href="#"><li>Informacion de Contacto</li></a>
+                        <li><a href="#">Servicio al Cliente</a></li>
+                        <li><a href="#">Formulario de Contacto</a></li>
+                        <li><a href="#">Informacion de Contacto</a></li>
                     </ul>
                 </div>
            </div>
