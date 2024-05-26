@@ -1,0 +1,158 @@
+body{
+    min-height: 100%;
+    margin: 0%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(150deg, #78c3d6,#FFF);
+    height: 100vh;
+}
+
+.Container-InicioSesion{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 500px;
+    border-bottom: 4px solid #78c3d6;
+    display: flex;
+    flex-direction: row-reverse;
+    background: #FFF;
+    border-radius: 50px;
+}
+
+.container-izquierdo{
+    text-align: center;
+    width: 450px;
+
+}
+.arrow-back-container {
+    position: absolute;
+    top: 5%;
+    left: 94%;
+}
+
+.arrow-back {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #003746;
+}
+
+.container-izquierdo h1{
+    color: #003746;
+    padding: 10px 0 30px 0;
+
+
+}
+
+.container-izquierdo form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .usuarioInicio{
+    position: relative;
+    border-bottom: 2px solid #003746;
+    margin: 40px 0;
+}
+
+.usuarioInicio{
+    position: relative;
+}
+
+.usuarioInicio input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.usuarioInicio label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #85aeb8;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.usuarioInicio span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #85aeb8;
+}
+
+
+.usuarioInicio input:focus ~ label,
+.usuarioInicio input:not(:placeholder-shown) ~ label {
+    top: -6px;
+    color: #85aeb8;
+}
+
+.buttonIniciarSesion button{
+    display:block;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 50px 0 30px 0;
+    background: #78c3d6;
+    font-size: 24px;
+    color: #003746;
+}
+
+.iniciar:hover{
+    background: #027797;
+    color: #78c3d6;
+}
+
+.iniciar:active{
+    background: #78c3d6;
+    color: #003746;
+}
+
+.olvidoContraseña a{
+    text-decoration: none;
+}
+
+.olvidoContraseña:hover{
+    text-decoration: underline;
+}
+
+.unete{
+    display: flex;
+    justify-content: center;
+}
+
+.unete a{
+    text-decoration: none;
+    padding: 0 0 0 15px;
+}
+
+.unete a:hover{
+    text-decoration: underline;
+}
+
+.container-Derecho{
+    width: 450px;
+    background-image: url(../img/FondosPantalla/InicioSesion.jpeg);
+    background-repeat: no-repeat;
+    background-size: 450px 500px;
+    border-radius: 50px 0 0 50px ;
+   
+}

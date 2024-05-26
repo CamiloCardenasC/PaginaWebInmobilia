@@ -1,18 +1,22 @@
-<%-- 
-    Document   : RegistroCliente
-    Created on : 19 may 2024, 1:03:56 p.m.
-    Author     : kmilo
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registrarse</title>
-    </head>
-    <body>
-        <h1>Registrarse</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="css/Style_RegistroUsuario.css">
+    <link rel="icon" href="img/Logo/Logo_Inmobiliaria.ico">
+</head>
+<body>
+    <Div class="Container-Registrarse">
+        <div class="container-izquierdo">
+                <h1>Registrarse</h1>
+                
+                <div class="arrow-back-container">
+                    <a href="Home.jsp" class="arrow-back">&#8592;</a>
+                </div>
+
                 
                 <form action="SvRegistroCliente" method="POST">
                     <div class="usuarioRegistro">
@@ -26,7 +30,7 @@
                     
                     </div>
                     <div class="usuarioRegistro">
-                        <label for="fechaNacimiento">* Fecha de nacimiento</label>
+                        <label for="fechaNaci">* Fecha de nacimiento</label>
                         <input type="date" id="fechaNaci" name="fechaNacimiento" required>
                         
                     </div>
@@ -60,6 +64,13 @@
                         <button type="submit" class="resgistrarse"><strong>Registrarse</strong></button>
                     </div>
                 </form>
-        
-    </body>
+        <div class="iniciar">
+                    <p>¿Ya tienes una cuenta?</p>
+                    <p><a href="InicioSesion.jsp">Iniciar Sesión</a></p>
+                </div>
+        </div>
+        <div class="container-Derecho">
+        </div>
+    </Div>  
+</body>
 </html>
