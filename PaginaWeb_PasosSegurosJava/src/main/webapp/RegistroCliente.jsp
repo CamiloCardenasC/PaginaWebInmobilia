@@ -1,12 +1,28 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <link rel="stylesheet" href="css/Style_RegistroUsuario.css">
     <link rel="icon" href="img/Logo/Logo_Inmobiliaria.ico">
+    <script>
+        //Se crea una funcion para validar la contraseña
+        function validarPassword() {
+            const password = document.getElementById('password').value; // Guardamos la contraseña
+            const confirmarPassword = document.getElementById('confirmarPassword').value; // Se guarda la contraseña a verificar
+            const errorMensaje = document.getElementById('error-message'); // Mensaje de error
+            
+            if (password !== confirmarPassword) {
+                errorMensaje.textContent = "Las contraseñas no coinciden";
+                return false; // Se retorna Falso para que el formulario no se envíe si no coinciden.
+            } else {
+                errorMensaje.textContent = "";
+                return true; // Si coinciden se envía el formulario y se guarda en la BD
+            }
+        }
+    </script>
 </head>
 <body>
     <Div class="Container-Registrarse">
@@ -17,8 +33,9 @@
                     <a href="Home.jsp" class="arrow-back">&#8592;</a>
                 </div>
 
-                
-                <form action="SvRegistroCliente" method="POST">
+                <%--El formulario tiene el atributo onsubmit para llamar la funcion validarPassword cuando
+                 se trate de enviar el formulario--%>
+                <form action="SvRegistroCliente" method="POST" onsubmit="return validarPassword()">
                     <div class="usuarioRegistro">
                         <label for="nombreUsuario">* Nombre</label>
                         <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Escriba su nombre" required>
@@ -50,16 +67,20 @@
 
                     </div>
                     <div class="usuarioRegistro">
-                        <label for="confirmarPassword">* Confirmar Contraseña</label>
-                        <input type="password" id="confirmarPassword" name="confirmarPassword" required>
+                        <label for="password">* Confirmar Contraseña</label>
+                        <input type="password" id="confirmarPassword" name="password" required>
                     </div>
+                    
+                    <div id="error-message" style="color: red;"></div>
+                    
                     <div class="textContraseña">
                         <p>7 caracteres como mínimo con al menos una letra y un número, 
                             sensible a mayúsculas y minúsculas. Caracteres especiales 
                             permitidos: @ # $% ^ & + =!</p>
                     </div>
 
-
+                    
+                    
                     <div class="buttonRegistrarse">
                         <button type="submit" class="resgistrarse"><strong>Registrarse</strong></button>
                     </div>
@@ -71,6 +92,7 @@
         </div>
         <div class="container-Derecho">
         </div>
-    </Div>  
+    </Div>
+    
 </body>
 </html>

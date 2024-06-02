@@ -25,7 +25,7 @@ public class Usuario implements Serializable {
     private String nombreUsuario;
     private String password;
     
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.TIMESTAMP)//Define el tipo de fecha
     @Column(name = "fechaRegistro", updatable = false, nullable = false)//Se nombra la columna, update false es para evitar que se actualice y evitar que sea null
     private Date fechaRegistro;
     
@@ -38,10 +38,12 @@ public class Usuario implements Serializable {
     @OneToOne(mappedBy = "usuario")
     private Cliente cliente;
 
+    //Constructor Vacio
     public Usuario() {
         this.fechaRegistro = new Date();
     }
 
+    //Constructor Con parametros
     public Usuario(int idUsuario, String nombreUsuario, String password, Date fechaRegistro, Empleado empleado, Cliente cliente) {
         this.idUsuario = idUsuario;
         this.nombreUsuario = nombreUsuario;
@@ -51,6 +53,7 @@ public class Usuario implements Serializable {
         this.cliente = cliente;
     }
 
+    //Getter y Setter
     public int getIdUsuario() {
         return idUsuario;
     }

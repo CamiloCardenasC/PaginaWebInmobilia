@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
     <link rel="stylesheet" href="/HTML/style_registroUsuario.css">
-    <link rel="stylesheet" href="">
-    <link rel="icon" href="/Imagenes/LOGO/logoPestaña.ico">
+    <link rel="icon" href="/Imagenes/Logo/logoPestaña.ico">
+    <script src="app.js"  defer></script>
+    <script>
+        //Se crea una funcion para validar la contraseña
+        function validarPassword() {
+            const password = document.getElementById('passwordUsuario').value; // Guardamos la contraseña
+            const confirmarPassword = document.getElementById('confirmarPassword').value; // Se guarda la contraseña a verificar
+            const errorMensaje = document.getElementById('error-message'); // Mensaje de error
+            
+            if (password !== confirmarPassword) {
+                errorMensaje.textContent = "Las contraseñas no coinciden";
+                return false; // Se retorna Falso para que el formulario no se envíe si no coinciden.
+            } else {
+                errorMensaje.textContent = "";
+                return true; // Si coinciden se envía el formulario y se guarda en la BD
+            }
+        }
+    </script>
 </head>
 <body>
     <Div class="Container-Registrarse">
@@ -16,17 +32,22 @@
                 <div class="arrow-back-container">
                     <a href="indexHome.html" class="arrow-back">&#8592;</a>
                 </div>
-                
-                <form action="registrase">
+
+                <form id="registroFormulario" onsubmit="return validarPassword()">
                     <div class="usuarioRegistro">
                         <label for="nombreUsuario">* Nombre</label>
                         <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Escriba su nombre" required>
                         
                     </div>
                     <div class="usuarioRegistro">
-                        <label for="userName">* Apellidos</label>
-                        <input type="text" id="apellidos" name="apellidos" placeholder="Escriba sus Apellidos" required>
+                        <label for="apellidosUsuario">* Apellidos</label>
+                        <input type="text" id="apellidosUsuario" name="apellidosUsuario" placeholder="Escriba sus Apellidos" required>
                     
+                    </div>
+                    <div class="usuarioRegistro">
+                        <label for="fechaNacimiento">* Fecha de nacimiento</label>
+                        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                        
                     </div>
                     <div class="usuarioRegistro">
                         <label for="telefono">* Telefono/Movil</label>
@@ -34,37 +55,41 @@
                         
                     </div>
                     <div class="usuarioRegistro">
-                        <label for="email">* Correo electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="example@dominio.com" required>
+                        <label for="emailUsuario">* Correo electrónico</label>
+                        <input type="email" id="emailUsuario" name="emailUsuario" placeholder="example@dominio.com" required>
                         
                     </div>
                     <div class="usuarioRegistro">
-                        <label for="contraseña">* Contraseña</label>
-                        <input type="password" id="password" name="password" required>
+                        <label for="passwordUsuario">* Contraseña</label>
+                        <input type="password" id="passwordUsuario" name="passwordUsuario" required>
 
                     </div>
                     <div class="usuarioRegistro">
-                        <label for="contraseña">* Confirmar contraseña</label>
-                        <input type="password" id="password" name="password" required>
+                        <label for="confirmarPassword">* Confirmar Contraseña</label>
+                        <input type="password" id="confirmarPassword" name="confirmarPassword" required>
                     </div>
+                    
+                    <div id="error-message" style="color: red;"></div>
+                    
                     <div class="textContraseña">
                         <p>7 caracteres como mínimo con al menos una letra y un número, 
                             sensible a mayúsculas y minúsculas. Caracteres especiales 
                             permitidos: @ # $% ^ & + =!</p>
                     </div>
 
-
+                                        
                     <div class="buttonRegistrarse">
                         <button type="submit" class="resgistrarse"><strong>Registrarse</strong></button>
                     </div>
-                </form> 
-                <div class="iniciar">
+                </form>
+        <div class="iniciar">
                     <p>¿Ya tienes una cuenta?</p>
-                    <p><a href="/HTML/InicioSesion.html">Iniciar Sesión</a></p>
+                    <p><a href="InicioSesion.html">Iniciar Sesión</a></p>
                 </div>
         </div>
         <div class="container-Derecho">
         </div>
-    </Div>  
+    </Div>
+    
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -165,12 +164,10 @@
                     </ul>
                 </div>
            </div>
-       </div>
-       
+       </div>    
         <div class="copyrigth">
             <p>Copyrigth &#169 2024 Pasos Seguros</p>
         </div>
-    </footer>
-    
+    </footer>    
 </body>
 </html>

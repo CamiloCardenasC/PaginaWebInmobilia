@@ -11,6 +11,7 @@ import java.util.Date;
 import logica.Cliente;
 import logica.ControladoraLogica;
 import logica.Usuario;
+import org.mindrot.jbcrypt.BCrypt;
 
 
 /**
@@ -47,6 +48,8 @@ public class SvRegistroCliente extends HttpServlet {
         String telefonoUsu = request.getParameter("telefonoUsuario");
         String emailUsu = request.getParameter("emailUsuario");
         String passwordUsu = request.getParameter("passwordUsuario");
+        //Se encripta la contraseña
+        String hashedPassword = BCrypt.hashpw(passwordUsu, BCrypt.gensalt());
         
         //parseamos la fecha ya que al recolectarse del formulario esta en String
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd");
@@ -61,7 +64,7 @@ public class SvRegistroCliente extends HttpServlet {
         //Se crea un usuario
         Usuario usu = new Usuario();
         usu.setNombreUsuario(emailUsu); // Asignar el email como nombre de usuario
-        usu.setPassword(passwordUsu); 
+        usu.setPassword(hashedPassword); 
         
         //Se Crea el cliente
         Cliente cliente = new Cliente();
@@ -70,14 +73,14 @@ public class SvRegistroCliente extends HttpServlet {
         cliente.setFechaNacimiento(fechaNacimiento);
         cliente.setTelefonoPersona(telefonoUsu);
         cliente.setCorreoElectronico(emailUsu);
-        cliente.setPassword(passwordUsu);
+        cliente.setPassword(hashedPassword);
         cliente.setUsuario(usu);
         
         //Persistir el cliente y el usuario
         control.crearCliente(cliente);
         
         //Se redirije a la pagina de Inicio
-        response.sendRedirect("Home.jsp");
+        response.sendRedirect("BienvenidoUsuario.jsp");
     }
 
    
