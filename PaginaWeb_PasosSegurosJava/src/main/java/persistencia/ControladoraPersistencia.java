@@ -1,6 +1,8 @@
 package persistencia;
 
 import logica.Cliente;
+import logica.Usuario;
+import java.util.List;
 
 /**
  *
@@ -32,4 +34,8 @@ public class ControladoraPersistencia {
         clienJPA.create(cliente);
     }
     
+    //Se crea un metodo List para que busque y guarde todos los usuarios que se encuentren en la BD
+    public List<Usuario> getUsuarios(){
+        return usuaJPA.findUsuarioEntities();
+    }
 }

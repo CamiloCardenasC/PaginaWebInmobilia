@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <link rel="stylesheet" href="css/Style_RegistroUsuario.css">
-    <link rel="icon" href="img/Logo/Logo_Inmobiliaria.ico">
+    <link rel="stylesheet" href="css/style_RegistroUsuario.css">
+    <link rel="icon" href="img/logo/logoPestaña.ico">
     <script>
         //Se crea una funcion para validar la contraseña
         function validarPassword() {
@@ -30,7 +30,7 @@
                 <h1>Registrarse</h1>
                 
                 <div class="arrow-back-container">
-                    <a href="Home.jsp" class="arrow-back">&#8592;</a>
+                    <a href="indexHome.jsp" class="arrow-back">&#8592;</a>
                 </div>
 
                 <%--El formulario tiene el atributo onsubmit para llamar la funcion validarPassword cuando
@@ -58,7 +58,7 @@
                     </div>
                     <div class="usuarioRegistro">
                         <label for="email">* Correo electrónico</label>
-                        <input type="email" id="email" name="emailUsuario" placeholder="example@dominio.com" required>
+                        <input type="email" id="email" name="emailUsuario" placeholder="example@dominio.com" autocomplete="off" required>
                         
                     </div>
                     <div class="usuarioRegistro">
@@ -87,7 +87,7 @@
                 </form>
         <div class="iniciar">
                     <p>¿Ya tienes una cuenta?</p>
-                    <p><a href="InicioSesion.jsp">Iniciar Sesión</a></p>
+                    <p><a href="inicioSesion.jsp">Iniciar Sesión</a></p>
                 </div>
         </div>
         <div class="container-Derecho">

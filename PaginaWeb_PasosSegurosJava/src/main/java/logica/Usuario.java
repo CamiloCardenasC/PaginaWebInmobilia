@@ -1,5 +1,6 @@
 package logica;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,7 +23,7 @@ public class Usuario implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUsuario;
     
-    private String nombreUsuario;
+    private String correoElectronico;
     private String password;
     
     @Temporal(TemporalType.TIMESTAMP)//Define el tipo de fecha
@@ -35,7 +36,7 @@ public class Usuario implements Serializable {
     private Empleado empleado;
     
     //Define que un Usuarios solo puede tener un solo cliente.
-    @OneToOne(mappedBy = "usuario")
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
     private Cliente cliente;
 
     //Constructor Vacio
@@ -44,9 +45,9 @@ public class Usuario implements Serializable {
     }
 
     //Constructor Con parametros
-    public Usuario(int idUsuario, String nombreUsuario, String password, Date fechaRegistro, Empleado empleado, Cliente cliente) {
+    public Usuario(int idUsuario, String correoElectronico, String password, Date fechaRegistro, Empleado empleado, Cliente cliente) {
         this.idUsuario = idUsuario;
-        this.nombreUsuario = nombreUsuario;
+        this.correoElectronico = correoElectronico;
         this.password = password;
         this.fechaRegistro = fechaRegistro;
         this.empleado = empleado;
@@ -62,12 +63,12 @@ public class Usuario implements Serializable {
         this.idUsuario = idUsuario;
     }
 
-    public String getNombreUsuario() {
-        return nombreUsuario;
+    public String getCorreoElectronico() {
+        return correoElectronico;
     }
 
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
     }
 
     public String getPassword() {

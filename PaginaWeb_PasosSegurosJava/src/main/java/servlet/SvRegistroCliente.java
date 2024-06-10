@@ -48,6 +48,7 @@ public class SvRegistroCliente extends HttpServlet {
         String telefonoUsu = request.getParameter("telefonoUsuario");
         String emailUsu = request.getParameter("emailUsuario");
         String passwordUsu = request.getParameter("passwordUsuario");
+        
         //Se encripta la contraseña
         String hashedPassword = BCrypt.hashpw(passwordUsu, BCrypt.gensalt());
         
@@ -63,7 +64,7 @@ public class SvRegistroCliente extends HttpServlet {
         
         //Se crea un usuario
         Usuario usu = new Usuario();
-        usu.setNombreUsuario(emailUsu); // Asignar el email como nombre de usuario
+        usu.setCorreoElectronico(emailUsu); // Asignar el email como nombre de usuario
         usu.setPassword(hashedPassword); 
         
         //Se Crea el cliente
@@ -80,7 +81,7 @@ public class SvRegistroCliente extends HttpServlet {
         control.crearCliente(cliente);
         
         //Se redirije a la pagina de Inicio
-        response.sendRedirect("BienvenidoUsuario.jsp");
+        response.sendRedirect("inicioSesion.jsp");
     }
 
    

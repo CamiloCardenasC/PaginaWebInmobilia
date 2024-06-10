@@ -2,173 +2,786 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pasos Seguros - Home</title>
-    <link rel="stylesheet" href="style_indexHome.css">
-    <link rel="icon" href="/Imagenes/LOGO/logoPestaña.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+    <link rel="icon" href="/Imagenes/Logo/logoPestaña.ico">
+    <link rel="stylesheet" href="/fonts/icon-7-stroke/css/pe-icon-7-stroke.css">
+    <link rel="stylesheet" href="/fonts/icon-7-stroke/css/helper.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-select.min.css"> 
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style_indexHome.css">
 </head>
 <body>
-    
-    <header>
-        <div class="containerEncabezado">
-            <div class="servicios">
-                <a href="" class="enlaceSinSubrayado"><strong>Servicios</strong></a>
-                <a href="" class="enlaceSinSubrayado"><strong>Nosotros</strong></a>
-                <a href="" class="enlaceSinSubrayado"><strong>Contacto</strong></a>
+    <!--Area del Header-->
+    <header class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="indexHome.html" class="navbar-brand"><img src="/Imagenes/Logo/Logo_Inmobiliaria.webp" alt="Logo_Inmobiliaria"></a>
             </div>
-            <div class="logoInicial">
-                <a href="indexHome.html"><img src="/Imagenes/LOGO/Logo_Inmobiliaria.webp" alt="Logo_Inmobiliaria"></a>
-            </div>
-            <div class="inicioSesion">
-                <a href="/HTML/InicioSesion.html" class="enlaceSinSubrayado"><strong>Inicia Sesión</strong></a>
+
+            <div class="collapse navbar-collapse">
+                
+                <div class="button navbar-right">
+                    <button class="navbar-btn nav-button login" onclick="window.open('inicioSesion.html')">Iniciar sesión</button>
+                    <button class="navbar-btn nav-button enviar" onclick=" window.open('')">Enviar</button>
+                </div>
+
+                <ul class="main-nav nav navbar-nav navbar-right">
+                    <li><a href="#"><strong>Inicio</strong></a></li>
+                    <li><a href=""><strong>Propiedades</strong></a></li>
+                    <li><a href=""><strong>Mi Propiedad</strong></a></li>
+                    <li><a href=""><strong>Contacto</strong></a></li>
+                </ul>
             </div>
         </div>
     </header>
-    
+    <!--Cuerpo de la Pagina-->
     <main>
-        
-        <div class="container">
-            <div class="agrupacion">
-                <h1 class="titulo1">Donde tus sueños encuentran su hogar</h1>
-            
-                <div class="options">
-            
-                    <label class="option">
-                        <input type="radio" id="venta" name="opcion" value="venta">
-                        <span class="button">venta</span>
-                    </label>
-                
+        <!--Busqueda de propiedades-->    
+        <div class="slider-area">
+            <div class="container slider-content">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+                        <h2>Donde tus sueños encuentran un hogar</h2>
+                        <p><strong>Juntos convertiremos tus sueños en realidad</strong></p>
                     
-                    <label class="option">
-                        <input type="radio" id="alquiler" name="opcion" value="alquiler">
-                        <span class="button">alquiler</span>
-                    </label>
-                </div>
-                <div>
-                    <form action="#" method="get">
-                        <div class="search">
-                            <input type="text" name="search" id="search" placeholder="¿En que ciudad busca su sueño?">
-                            <input type="submit" value="Buscar">
+                        <div class="search-form wow pulse" data-wow-delay="0.8s">
+
+                            <form action="" class=" form-inline">
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="¿Que inmueble buscas?">
+                                </div>
+                                <div class="form-group">                                   
+                                    <select id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Selecciona tu ciudad">
+
+                                        <option>Armenia</option>
+                                        <option>Barrancabermeja</option>
+                                        <option>Barranquilla</option>
+                                        <option>Bello</option>
+                                        <option>Bogotá, D.C.</option>
+                                        <option>Bucaramanga</option>
+                                        <option>Buenaventura</option>
+                                        <option>Cali</option>
+                                        <option>Cartagena</option>
+                                        <option>Cúcuta</option>
+                                        <option>Dosquebradas</option>
+                                        <option>Envigado</option>
+                                        <option>Floridablanca</option>
+                                        <option>Ibagué</option>
+                                        <option>Itagüí</option>
+                                        <option>Manizales</option>
+                                        <option>Medellin</option>
+                                        <option>Montería</option>
+                                        <option>Neiva</option>
+                                        <option>Palmira</option>
+                                        <option>Pasto</option>
+                                        <option>Pereira</option>
+                                        <option>Popayán</option>
+                                        <option>Riohacha</option>
+                                        <option>Santa Marta</option>
+                                        <option>Sincelejo</option>
+                                        <option>Soacha</option>
+                                        <option>Soledad</option>
+                                        <option>Tuluá</option>
+                                        <option>Tumaco</option>
+                                        <option>Valledupar</option>
+                                        <option>Villavicencio</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">                                     
+                                    <select id="basic" class="selectpicker show-tick form-control">
+                                        <option> -Estado del inmueble- </option>
+                                        <option>En venta</option>
+                                        <option>En arriendo</option>  
+
+                                    </select>
+                                </div>
+                                <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
+
+                                <div style="display: none;" class="search-toggle">
+
+                                    <div class="search-row">   
+
+                                        <div class="form-group mar-r-20">
+                                            <label for="price-range">Price range ($):</label>
+                                            <input type="text" class="span2" value="" data-slider-min="0" 
+                                                   data-slider-max="600" data-slider-step="5" 
+                                                   data-slider-value="[0,450]" id="price-range" ><br />
+                                            <b class="pull-left color">2000$</b> 
+                                            <b class="pull-right color">100000$</b>
+                                        </div>
+                                        <!-- End of  -->  
+
+                                        <div class="form-group mar-l-20">
+                                            <label for="property-geo">Property geo (m2) :</label>
+                                            <input type="text" class="span2" value="" data-slider-min="0" 
+                                                   data-slider-max="600" data-slider-step="5" 
+                                                   data-slider-value="[50,450]" id="property-geo" ><br />
+                                            <b class="pull-left color">40m</b> 
+                                            <b class="pull-right color">12000m</b>
+                                        </div>
+                                        <!-- End of  --> 
+                                    </div>
+
+                                    <div class="search-row">
+
+                                        <div class="form-group mar-r-20">
+                                            <label for="price-range">Min baths :</label>
+                                            <input type="text" class="span2" value="" data-slider-min="0" 
+                                                   data-slider-max="600" data-slider-step="5" 
+                                                   data-slider-value="[250,450]" id="min-baths" ><br />
+                                            <b class="pull-left color">1</b> 
+                                            <b class="pull-right color">120</b>
+                                        </div>
+                                        <!-- End of  --> 
+
+                                        <div class="form-group mar-l-20">
+                                            <label for="property-geo">Min bed :</label>
+                                            <input type="text" class="span2" value="" data-slider-min="0" 
+                                                   data-slider-max="600" data-slider-step="5" 
+                                                   data-slider-value="[250,450]" id="min-bed" ><br />
+                                            <b class="pull-left color">1</b> 
+                                            <b class="pull-right color">120</b>
+                                        </div>
+                                        <!-- End of  --> 
+
+                                    </div>
+                                    <br>
+                                    <div class="search-row">  
+
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Fire Place(3100)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- End of  -->  
+
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Dual Sinks(500)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- End of  --> 
+
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Hurricane Shutters(99)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- End of  --> 
+                                    </div>
+
+                                    <div class="search-row">  
+
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Swimming Pool(1190)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- End of  -->  
+
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> 2 Stories(4600)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- End of  --> 
+
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Emergency Exit(200)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- End of  --> 
+                                    </div>                                    
+
+                                    <div class="search-row">  
+
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Laundry Room(10073)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- End of  -->  
+
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Jog Path(1503)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- End of  --> 
+
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> 26' Ceilings(1200)
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <!-- End of  --> 
+                                    </div>   
+
+                                </div>                     
+
+                            </form>
                         </div>
-                        
-                    </form>
+                    </div>        
+                    
                 </div>
             </div>       
-        </div>  
+        </div>
+        <!--Propiedades nuevas en venta-->
+        <div class="content-area recent-property" style="padding-bottom: 60px; background-color: rgb(252, 252, 252);">
+            <div class="container">  
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+                        
+                        <h2>Nuevo | En Venta</h2>
+                        <p>Aquí podras encontrar nuevos inmuebles a la venta, no pierdas la oportunidad de comprar la propiedad de tus sueños</p>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12  padding-top-40 properties-page">
+    
+                        <div class="col-md-12 "> 
+                            <div id="list-type" class="proerty-th">
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta1.webp"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta2.jpg"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta3.webp"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta4.webp"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta5.jpg"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="assets/img/demo/property-2.jpg"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="assets/img/demo/property-3.jpg"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-tree more-proerty text-center">
+                                        <div class="item-tree-icon">
+                                            <i class="fa fa-th"></i>
+                                        </div>
+                                        <div class="more-entry overflow">
+                                            <h5><a href="property-1.html" >¿Aún no te decides? </a></h5>
+                                            <h5 class="tree-sub-ttl">Todas las propiedades</h5>
+                                            <button class="btn border-btn more-black" value="All properties">All properties</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <div class="content-area recent-property" style="padding-bottom: 60px; background-color: rgb(252, 252, 252);">
+            <div class="container">  
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+                        
+                        <h2>Nuevo | En arriendo</h2>
+                        <p>Aquí podras encontrar nuevos inmuebles en arriendo, podras alquilar un apartamento a tu gusto mientras compras el tuyo</p>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-md-12  padding-top-40 properties-page">
+    
+                        <div class="col-md-12 "> 
+                            <div id="list-type" class="proerty-th">
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta1.webp"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta2.jpg"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta3.webp"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta4.webp"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="/Imagenes/OpcionesCasas/CasaVenta5.jpg"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="assets/img/demo/property-2.jpg"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="property-1.html" ><img src="assets/img/demo/property-3.jpg"></a>
+                                        </div>
+    
+                                        <div class="item-entry overflow">
+                                            <h5><a href="property-1.html"> Super nice villa </a></h5>
+                                            <div class="dot-hr"></div>
+                                            <span class="pull-left"><b> Area :</b> 120m </span>
+                                            <span class="proerty-price pull-right"> $ 300,000</span>
+                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
+                                            <div class="property-icon">
+                                                <img src="/imagenes/icon/bed.png">(5)|
+                                                <img src="/imagenes/icon/shawer.png">(2)|
+                                                <img src="/imagenes/icon/cars.png">(1)  
+                                            </div>
+                                        </div>
+    
+    
+                                    </div>
+                                </div> 
+    
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-tree more-proerty text-center">
+                                        <div class="item-tree-icon">
+                                            <i class="fa fa-th"></i>
+                                        </div>
+                                        <div class="more-entry overflow">
+                                            <h5><a href="property-1.html" >¿Aún no te decides? </a></h5>
+                                            <h5 class="tree-sub-ttl">Todas las propiedades</h5>
+                                            <button class="btn border-btn more-black" value="All properties">All properties</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
     </main>
 
-    <div class="envoltura">
-        <div class="header-text">
-            <h2>Nuevos | Venta</h2>
-        </div>
-        
-        <div class="container-slider">
-            <div class="slider-Wrapper">
-
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/CasaVenta1.webp" alt="Casa En Venta 1"></a>
-                </div>
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/CasaVenta2.jpg" alt="Casa en Venta 2"></a>
-                </div>
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/CasaVenta3.webp" alt="Casa En Venta 3"></a>
-                </div>
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/CasaVenta4.webp" alt="Casa En Venta 4"></a>
-                </div>
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/CasaVenta5.jpg" alt="Casa En Venta 5"></a>
-                </div>
-            </div>   
-        </div>
-        
-        <div class="header-text">
-            <h2>Nuevos | Alquiler</h2>
-        </div>
-        
-        <div class="container-slider">
-            <div class="slider-Wrapper">
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/AlquilerApto1.jpg" alt="Apto Alquiler 1"></a>
-                </div>
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/AlquilerApto2.jpg" alt="Apto Alquiler 2"></a>
-                </div>
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/AlquilerApto3.jpg" alt="Apto Alquiler 3"></a>
-                </div>
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/AlquilerCasa4.jpg" alt="Casa Alquiler 4"></a>
-                </div>
-                <div class="slider-item">
-                    <a href="#"><img src="/Imagenes/OpcionesCasas/AlquilerCasa5.jpg" alt="Casa Alquiler 5"></a>
-                </div>
-            </div>
-            
-        </div>
-    </div>
     
+    
+    <!--Area del footer-->
+    <footer class="footer-area">
+        <div class="footer">
+            <div class="container">
+                <div class="row">    
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer">
+                            <h4>Sobre Nosotros</h4>
+                            <div class="footer-title-line"></div>
 
-    <footer>
-        <div class="container-redes-sociales">
-            <div class="container-izquierdo">    
-                <div class="logo-footer">
-                    <a href="#"><img src="/Imagenes/Logo/Logo_Inmobiliaria.webp" alt="Logo_Inmobiliaria"></a>
+                            <img src="/Imagenes/Logo/Logo_Inmobiliaria.webp" alt="Logo_Inmobiliaria_Pasos_Seguros" class="logoFooter">
+                            <p>En Pasos Seguros, nos dedicamos a proporcionar soluciones inmobiliarias confiables y efectivas. Nuestro compromiso es ayudarte a encontrar el hogar de tus sueños con total seguridad y confianza.</p>
+                            <ul class="footer-adress">
+                                <li><i class="pe-7s-map-marker strong"> </i>Cra. 93A #11A-41, Bogotá</li>
+                                <li><i class="pe-7s-mail strong"> </i>solicitudes@PasosSeguros.com</li>
+                                <li><i class="pe-7s-call strong"> </i>+57 322 379 8988</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">  
+                        <div class="single-footer">
+                            <h4>Interes</h4>
+                            <div class="footer-title-line"></div>
+                            <ul class="footer-menu">
+                                <li><a href="#">Propiedades</a>  </li> 
+                                <li><a href="#">Servicios</a>  </li> 
+                                <li><a href="#">Enviar Propiedad</a></li> 
+                                <li><a href="contact.html">Contáctenos</a></li> 
+                                <li><a href="faq.html">PQRS</a></li> 
+                                <li><a href="faq.html">Terminos y condiciones</a></li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer">
+                            <h4>Últimas Noticias</h4>
+                            <div class="footer-title-line"></div>
+                            <ul class="footer-blog">
+                                <li>
+                                    <div class="col-md-3 col-sm-4 col-xs-4 blg-thumb p0">
+                                        <a href="#">
+                                            <img src="Imagenes/OpcionesCasas/AlquilerApto1.jpg">
+                                        </a>
+                                        <span class="blg-date">12-04-2024</span>
+
+                                    </div>
+                                    <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                        <h6> <a href="single.html">Nuevo inmueble</a></h6> 
+                                        <p style="line-height: 17px; padding: 8px 2px;">Un nuevo apartamento a llegado para la venta!</p>
+                                    </div>
+                                </li> 
+
+                                <li>
+                                    <div class="col-md-3 col-sm-4 col-xs-4 blg-thumb p0">
+                                        <a href="single.html">
+                                            <img src="Imagenes/OpcionesCasas/CasaVenta1.webp">
+                                        </a>
+                                        <span class="blg-date">28-04-2024</span>
+
+                                    </div>
+                                    <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                        <h6> <a href="single.html">Nuevo inmueble</a></h6> 
+                                        <p style="line-height: 17px; padding: 8px 2px; margin-top: 0px; margin-bottom: 0px;">La casa de tus sueños esta aquí, no la dejes ir!</p>
+                                    </div>
+                                </li> 
+
+                                <li>
+                                    <div class="col-md-3 col-sm-4 col-xs-4 blg-thumb p0">
+                                        <a href="single.html">
+                                            <img src="Imagenes/OpcionesCasas/AlquilerCasa4.jpg">
+                                        </a>
+                                        <span class="blg-date">17-05-2024</span>
+
+                                    </div>
+                                    <div class="col-md-8  col-sm-8 col-xs-8  blg-entry">
+                                        <h6> <a href="single.html">Nuevo inmueble</a></h6> 
+                                        <p style="line-height: 17px; padding: 4px 2px; margin: 0px;">A llegado la casa que todos desean, se el primero en conocerla.</p>
+                                    </div>
+                                </li> 
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="single-footer news-letter">
+                            <h4>Contactanos</h4>
+                            <div class="footer-title-line"></div>
+                            <p>Mantente en contacto con nosotros. Nos dedicamos a encontrar la persona ideal para tu inmueble o ayudarte a buscar el inmueble de tus sueños.</p>
+
+                            <form>
+                                <div class="input-group">
+                                    <input class="form-control" type="email" placeholder="Correo electronico">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary subscribe" type="button"><i class="pe-7s-paper-plane pe-2x"></i></button>
+                                    </span>
+                                </div>
+                            </form> 
+
+                            <div class="social pull-right"> 
+                                <ul>
+                                    <li><a class="wow fadeInUp animated" href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="https://www.facebook.com" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="https://plus.google.com" data-wow-delay="0.3s"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="https://instagram.com" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="https://instagram.com" data-wow-delay="0.6s"><i class="fa fa-dribbble"></i></a></li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-redes">
-                    <h2>Síguenos en:</h2>
-                </div>
-                <div class="Redes">
-                    <a href="https://www.tiktok.com/"><img src="/Imagenes/LogosRedesSociales/Tiktok.jpg" alt="Tiktok"></a>
-                    <a href="https://www.facebook.com/?locale=es_LA"><img src="/Imagenes/LogosRedesSociales/FaceBook.jpg" alt="FaceBook"></a>
-                    <a href="https://www.instagram.com/"><img src="/Imagenes/LogosRedesSociales/Instagram.jpg" alt="Instagram"></a>
-                    <a href="https://web.whatsapp.com/"><img src="/Imagenes/LogosRedesSociales/WhatsApp.jpg" alt="WhatsApp"></a><br>
-                    <a href="https://www.linkedin.com/home"><img src="/Imagenes/LogosRedesSociales/Linkedin.jpg" alt="Linkedin"></a>
-                    <a href="https://twitter.com/?lang=es"><img src="/Imagenes/LogosRedesSociales/Twitter.jpg" alt="Twitter"></a>
-                    <a href="https://www.youtube.com/"><img src="/Imagenes/LogosRedesSociales/YouTube.jpg" alt="YouTube"></a>
-                    <a href="https://co.pinterest.com/"><img src="/Imagenes/LogosRedesSociales/Pinterest.jpg" alt="Pinterest"></a>
-                </div>
+                
             </div>
-            <div class="container-derecho">
-                <div class="contenido">
-                    <h3>INICIO</h3>
-                    <ul class="list-contenido">
-                        <a href="#"><li>Compra</li></a>
-                        <a href="#"><li>Alquiler</li></a>
-                    </ul>
-                </div>
-                <div class="contenido">
-                    <h3>SERVICIOS</h3>
-                    <ul class="list-contenido">                        
-                        <a href="#"><li>Asesiramiento Legal</li></a>
-                    </ul>  
-                </div>
-                <div class="contenido">
-                    <h3>NOSOTROS</h3>
-                    <ul class="list-contenido">
-                        <a href="#"><li>Equipo</li></a>
-                        <a href="#"><li>Misión</li></a>
-                        <a href="#"><li>Visión</li></a>
-                        <a href="#"><li>Historia</li></a>
-                        <a href="#"><li>Testimonios</li></a>
-                    </ul>
-                </div>
-                <div class="contenido">
-                    <h3>CONTACTO</h3>
-                    <ul class="list-contenido">
-                        <a href="#"><li>Servicio al Cliente</li></a>
-                        <a href="#"><li>Formulario de Contacto</li></a>
-                        <a href="#"><li>Informacion de Contacto</li></a>
-                    </ul>
-                </div>
-           </div>
        </div>
        
-        <div class="copyrigth">
-            <p>Copyrigth &#169 2024 Pasos Seguros</p>
+       <div class="footer-copy text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="pull-left">
+                        <span> &#169 <a href="http://www.KimaroTec.com">Pasos Seguros</a> , All rights reserved 2024 </span> 
+                    </div> 
+                    <div class="bottom-menu pull-right"> 
+                        <ul> 
+                            <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Inicio</a></li>
+                            <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Propiedades</a></li>
+                            <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.4s">PQRS</a></li>
+                            <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.6s">Contacto</a></li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/bootstrap-hover-dropdown.js"></script>
 </body>
 </html>

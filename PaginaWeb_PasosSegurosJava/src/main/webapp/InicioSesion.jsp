@@ -5,20 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio Sesion</title>
-    <link rel="stylesheet" href="css/InicioSesion.css">    
-    <link rel="icon" href="img/Logo/logoPestaña.ico">
+    <link rel="stylesheet" href="css/style_InicioSesion.css">    
+    <link rel="icon" href="img/logo/logoPestaña.ico">
 </head>
 <body>
     <Div class="Container-InicioSesion">
         <div class="container-izquierdo">
-                <h1>Iniciar Sesion</h1>
+                
+            <h1>Iniciar Sesion</h1>
                 <div class="arrow-back-container">
-                    <a href="Home.jsp" class="arrow-back">&#8592;</a>
+                    <a href="indexHome.jsp" class="arrow-back">&#8592;</a>
                 </div>
-                <form action="IniciarSesion">
+                <div>
+                <% String errorMensaje = (String) request.getAttribute("error");
+                    if(errorMensaje != null){
+                        out.println("<p style='color: red;'>" + errorMensaje + "</p>");
+                    }
+                %>
+                </div>
+                <form action="SvAuthetication" method="POST">
+                    
+                    
+                    
                     <div class="usuarioInicio">
-                        <input type="text" id="userName" name="userName" required>
-                        <label for="userName">Correo electrónico</label>
+                        <input type="email" id="correoElectronico" name="correoElectronico" required>
+                        <label for="correoElectronico">Correo electrónico</label>
                         <span></span>
                     </div>
                     <div class="usuarioInicio">
@@ -35,7 +46,7 @@
                 </div>
                 <div class="unete">
                     <p>¿Aún no tienes una cuenta?</p>
-                    <p><a href="RegistroCliente.jsp">Únete</a></p>
+                    <p><a href="registroCliente.jsp">Únete</a></p>
                 </div>
         </div>
         <div class="container-Derecho">
