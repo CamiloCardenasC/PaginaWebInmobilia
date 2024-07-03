@@ -27,7 +27,7 @@ public class Cliente extends Persona implements Serializable{
     
     //Define que un cliente solo puede tener un solo usuario
     @OneToOne(cascade = CascadeType.ALL) //Cascade define que todas las acciones que se realicen con el objeto principal debe repetirse para todos los objetos.
-    @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
+    @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO")
     private Usuario usuario;
 
     //Constructor Vacio

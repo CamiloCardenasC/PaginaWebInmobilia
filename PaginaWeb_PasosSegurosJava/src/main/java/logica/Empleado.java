@@ -43,7 +43,7 @@ public class Empleado extends Persona implements Serializable{
     
     //Define que un empleado tiene un solo Usuario
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
+    @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO")
     private Usuario usuario;
 
     public Empleado() {

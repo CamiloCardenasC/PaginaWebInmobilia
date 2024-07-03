@@ -11,10 +11,18 @@ import persistencia.ControladoraPersistencia;
 public class ControladoraLogica {
  
     //Se instancia a la controladoraPersistencia para ingresar a los atributos de JPAController
-    ControladoraPersistencia controlPersis = new ControladoraPersistencia();
+    private ControladoraPersistencia controlPersis = new ControladoraPersistencia();
+   
+    
+    //Se crea una Lista para guardar todos los clientes 
+    public List<Cliente> getClientes(){
+        return controlPersis.getClientes();
+    }
+    
     
     //Metodo para crear un cliente y asociarlo a un usuario
     public void crearCliente(Cliente cliente){
+        
         
         // Crear el usuario para el cliente
         Usuario usu = new Usuario();
@@ -32,26 +40,31 @@ public class ControladoraLogica {
         return controlPersis.getUsuarios();
     }    
     
+   
+    
     //Metodo de Autenticacion donde recibe dos parametros
     public boolean autenticarUsuario(String correoElectronico, String password) {
-        
-        //
-        boolean ingreso = false;
         
         //Se obtiene lista de usuarios donde ingresa a la controladora de Persistencia
         List<Usuario> listaUsuarios = controlPersis.getUsuarios();
         
-        //Se crea un for each para buscar el usuario por correo electronico
-        for(Usuario usu: listaUsuarios){
-            
-            if (usu.getCorreoElectronico().equals(correoElectronico)) {
-                //Se compara la contraseña ingresada con la contraseña encriptada almacenada
-                if (BCrypt.checkpw(password, usu.getPassword())) {
-                    ingreso = true;
-                    break; //Se sale del bucle si se encuentra alguna coincidencia
-                }
-            }
-        }
-        return ingreso;
+       // Buscar el usuario por correo electrónico y verificar la contraseña
+       return listaUsuarios.stream()
+               .filter(usu -> usu.getCorreoElectronico().equals(correoElectronico))
+               .anyMatch(usu -> BCrypt.checkpw(password, usu.getPassword()));
+    }
+    
+    
+    public Cliente obtenerClienteAutenticado(String correoElectronico){
+        
+        //Se recupera todos los clientes
+        List<Cliente> listaClientes = controlPersis.getClientes();
+        
+        // Buscar el cliente que coincida con el correo electrónico
+        return listaClientes.stream()
+                .filter(cl -> cl.getCorreoElectronico().equals(correoElectronico))
+                .findFirst()
+                .orElse(null); // Si no se encuentra un cliente que coincida, devolver null
+                
     }
 }

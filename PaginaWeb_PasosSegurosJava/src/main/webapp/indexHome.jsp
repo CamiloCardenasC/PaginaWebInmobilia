@@ -1,6 +1,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@include file="/componentes/head.jsp"%>
-<%@include file="/componentes/headerIndex.jsp"%>
+
+<c:choose>
+    <c:when test="${not empty sessionScope.usuario}">
+        <%@include file="/componentes/indexHeaderUser.jsp" %>
+    </c:when>
+    <c:otherwise>
+        <%@include file="/componentes/headerIndex.jsp" %>
+    </c:otherwise>
+</c:choose>
 
 <!--Cuerpo de la Pagina-->
 <main>
@@ -88,174 +97,16 @@
     
                         <div class="col-md-12 "> 
                             <div id="list-type" class="proerty-th">
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/CasaVenta1.webp" alt="inmuebleVenta1"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Villa Rosales </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 220m </span>
-                                            <span class="proerty-price pull-right"> $ 210'000.000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(5)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/CasaVenta2.jpg" alt="inmuebleVenta2"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Alquinos II </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 110m </span>
-                                            <span class="proerty-price pull-right"> $ 140'000.000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(3)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/CasaVenta3.webp" alt="inmuebleVenta3"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Tunjuelito </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 70m </span>
-                                            <span class="proerty-price pull-right"> $ 200'000.000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(4)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(3)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/CasaVenta4.webp" alt="inmuebleVenta4"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Ensueño </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 160m </span>
-                                            <span class="proerty-price pull-right"> $ 430'000.000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(12)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(5)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/CasaVenta5.jpg" alt="inmuebleVenta5"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Socorro </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 60m </span>
-                                            <span class="proerty-price pull-right"> $ 170'000.000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(4)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1) 
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/aptoVenta1.webp" alt="inmuebleVenta6"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Rosales I </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 70m </span>
-                                            <span class="proerty-price pull-right"> $ 150'000.000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(3)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1) 
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/aptoVenta2.jpg" alt="inmuebleVenta7"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Parque Campestre IX </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 100m </span>
-                                            <span class="proerty-price pull-right"> $ 320'000.000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(4)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
+                                 
+                                <%@include file="/componentes/propiedadesVenta.jsp"%>
+                                
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-tree more-proerty text-center">
                                         <div class="item-tree-icon">
-                                            <i class="fa fa-th"></i>
+                                            <a href="${pageContext.request.contextPath}/pagePropiedades.jsp"><i class="fa fa-th"></i></a>
                                         </div>
                                         <div class="more-entry overflow">
-                                            <h5><a href="property-1.html" >¿Aún no te decides? </a></h5>
+                                            <h5><a href="${pageContext.request.contextPath}/pagePropiedades.jsp" >¿Aún no te decides? </a></h5>
                                             <h5 class="tree-sub-ttl">Ver más propiedades</h5>
                                             <button class="btn border-btn more-black" value="All properties">Todas la propiedades</button>
                                         </div>
@@ -264,10 +115,9 @@
                             </div>
                         </div>
                     </div>  
-                </div>
-            </div>
-        </div>
-
+                </div>                                     
+            </div>                               
+        </div>                          
         <!-- Propiedades nuevas en arriendo-->
         <div class="content-area recent-property" style="padding-bottom: 60px; background-color: rgb(252, 252, 252);">
             <div class="container">  
@@ -283,174 +133,16 @@
     
                         <div class="col-md-12 "> 
                             <div id="list-type" class="proerty-th">
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/AlquilerApto1.jpg" alt="inmuebleAlquiler1"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> San Juan Norte I </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 70m </span>
-                                            <span class="proerty-price pull-right"> $ 2'500.000 Mes</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(3)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/AlquilerApto2.jpg" alt="inmuebleAlquiler2"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Ciudad Latina </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 55m </span>
-                                            <span class="proerty-price pull-right"> $ 1'100.000 Mes</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(3)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/AlquilerApto3.jpg" alt="inmuebleAlquiler3"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Tintal II </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 65m </span>
-                                            <span class="proerty-price pull-right"> $ 1'000.000 Mes</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(3)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/AlquilerCasa4.jpg" alt="inmuebleAlquiler4"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Villa Sur </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 120m </span>
-                                            <span class="proerty-price pull-right"> $ 3'300.000 Mes</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(5)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(3)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/AlquilerCasa5.jpg" alt="inmuebleAlquiler5"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> La Estancia </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 100m </span>
-                                            <span class="proerty-price pull-right"> $ 1'900.000 Mes</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(4)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/casaArriendo1.jpg" alt="inmuebleAlquiler6"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Kennedy I </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 60m </span>
-                                            <span class="proerty-price pull-right"> $ 1'000.000 Mes</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(3)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(2)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(1)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
-                                <div class="col-sm-6 col-md-3 p0">
-                                    <div class="box-two proerty-item">
-                                        <div class="item-thumb">
-                                            <a href="property-1.html" ><img src="${pageContext.request.contextPath}/img/opcionesCasas/casaArriendo2.jpg" alt="inmuebleAlquiler7"></a>
-                                        </div>
-    
-                                        <div class="item-entry overflow">
-                                            <h5><a href="property-1.html"> Jackeline II </a></h5>
-                                            <div class="dot-hr"></div>
-                                            <span class="pull-left"><b> Area :</b> 50m </span>
-                                            <span class="proerty-price pull-right"> $ 1'000.000</span>
-                                            <p style="display: none;">Suspendisse ultricies Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium ...</p>
-                                            <div class="property-icon">
-                                                <img src="${pageContext.request.contextPath}/img/icon/bed.png" alt="habitacion">(3)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/shawer.png" alt="baño">(1)|
-                                                <img src="${pageContext.request.contextPath}/img/icon/cars.png" alt="parqueadero">(0)  
-                                            </div>
-                                        </div>
-    
-    
-                                    </div>
-                                </div> 
-    
+                                 
+                                <%@include file="/componentes/propiedadesAlquiler.jsp"%>
+                                
                                 <div class="col-sm-6 col-md-3 p0">
                                     <div class="box-tree more-proerty text-center">
                                         <div class="item-tree-icon">
-                                            <i class="fa fa-th"></i>
+                                            <a href="${pageContext.request.contextPath}/pagePropiedades.jsp"><i class="fa fa-th"></i></a>
                                         </div>
                                         <div class="more-entry overflow">
-                                            <h5><a href="property-1.html" >¿Aún no te decides? </a></h5>
+                                            <h5><a href="${pageContext.request.contextPath}/pagePropiedades.jsp" >¿Aún no te decides? </a></h5>
                                             <h5 class="tree-sub-ttl">Ver más propiedades</h5>
                                             <button class="btn border-btn more-black" value="All properties">Todas las propiedades</button>
                                         </div>

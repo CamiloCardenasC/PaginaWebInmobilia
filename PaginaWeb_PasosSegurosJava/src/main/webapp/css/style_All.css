@@ -84,7 +84,7 @@ a:hover {
   transition: all .8s ease;
 }
 a:focus {
-  color: #999696;
+  color: #00A2DE;
   text-decoration: none;
 }
 img {
@@ -285,24 +285,25 @@ input[type="search"]::-webkit-search-decoration {
 }
 .btn-primary {
   color: #FFF;
-  background-color: #FDC600;
-  border-color: #FDC600;
+  background-color: #00A2DE;
+  border-color: #00A2De;
   border-radius: 1px;
   padding: 10px 20px;
   font-weight: 600;
 }
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,.btn-primary:active:focus, .open > .dropdown-toggle.btn-primary {
-  color: #FDC600;
-  background-color: #313538;
-  border-color: #282829;
+  color: #00A2DE;
+  background-color: #003746;
+  border-color: #003746;
   font-weight: 600;
 }
 .btn-default {
   border-radius: 1px;
   padding: 10px 20px;
-  border: 1px solid #FDC600;
+  border: 1px solid #00A2DE;
   color: #000;
-  background-color: #FDC600;
+  background-color: #00A2DE;
   border-color: #F0F0F0;
   font-weight: 600;
 }
@@ -703,12 +704,55 @@ label small{
 
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  color: #929292;
+  color: #003746 ;
   background-color: transparent;
 }
 .navbar-nav > li > a {
   padding-right: 20px;
   padding-left: 20px;
+}
+
+.ml-auto{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+
+.dropdown-divider {
+    height: 0;
+    margin: .5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #003746;
+}
+
+svg{
+    margin: 5px;
+}
+
+.nav-link{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 .75rem;
+    list-style: none;
+    color: #003746;
+    font-size: 16px;
+    font-weight: 400;
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #003746;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
 }
 
 .navbar-default .navbar-nav > li > a.active:after{
@@ -1040,7 +1084,7 @@ label small{
 .slider-content p {
   font-size: 14px;
   margin-bottom: 60px;
-  color: #000000;
+  color: #1d2f3e;
   text-shadow: -1px 2px 13px rgba(255,255,255,1);
 
 }
@@ -1099,11 +1143,12 @@ label small{
 page-header
 ======================================================*/
 .page-head{
-  background: #494C53 url("../../assets/img/page-header.jpg") 
+  background: #494C53 url(../img/fondosPantalla/page-header.jpg) 
       no-repeat scroll center top / cover;
   color:#FFF;
   position: relative;
   min-height: 140px;
+  z-index: -1;
 }
 .page-head-content {
   padding-top: 52px;
@@ -1135,7 +1180,7 @@ page-header
   text-align: right;
 }
 .search-widget fieldset .largesearch-btn{
-  background-color: #FDC600;
+  background-color: #00A2DE;
   font-size: 16px;
   border: 1px solid #EAE9E9;
   width: 100%;
@@ -1190,7 +1235,7 @@ Asside widgets CSS
 .panel.sidebar-menu .panel-heading h4,
 .panel.sidebar-menu .panel-heading h5 {
   display: inline-block;
-  border-bottom: solid 3px #FDC600;
+  border-bottom: solid 3px #00A2DE;
   line-height: 1.1;
   margin-bottom: 0;
   padding-bottom: 10px;
@@ -2001,8 +2046,8 @@ single property page
   padding: 10px 7px 4px 7px;
 }
 .favorite-and-print .add-to-fav:hover  ,.favorite-and-print  .printer-icon:hover  {
-  color:#FDC600;
-  border-color: #FDC600;
+  color: #00A2DE;
+  border-color: #00A2DE;
 }
 .favorite-and-print .add-to-fav i ,.favorite-and-print  .printer-icon i  { 
   font-size: 25px;
@@ -2027,7 +2072,7 @@ single property page
   letter-spacing: 3px;
 }
 .single-property-header .property-price{
-  color: #FFA500;
+  color: #00A2DE;
   font-size: 30px;
   letter-spacing: 1.5px;
   right: 0px;
@@ -2102,7 +2147,7 @@ single property page
   padding: 15px 25px 25px;
 }
 .dealer-widget {
-  background-color: #838383;
+  background-color: #005A7A;
   padding: 15px;
   color:#FFF;
   padding-bottom: 20px;
@@ -2113,7 +2158,7 @@ single property page
   margin-bottom: 5px;
 }
 .dealer-name a {
-  color: #626262;
+  color: #00A2DE;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -2130,7 +2175,7 @@ single property page
   border: 2px solid #FFF;
 }
 .dealer-social-media a{
-  color: #969696;
+  color: #00A2DE;
   margin: 5px;
 }
 .dealer-contacts{
@@ -2138,7 +2183,7 @@ single property page
   padding: 30px 0px 0px 10px;
 }
 .dealer-contacts li i{
-  color: black;
+  color: #FFFFFF;
   padding-right: 8px;
 }
 .clear{ 
@@ -2185,11 +2230,11 @@ single property page
   margin: 5px;
 }
 .property-style2 .dealer-widget {
-  background-color: #838383; 
+  background-color: #005A7A; 
 }
 .dealer-section-space{
   margin: -5px -14px 25px;
-  background-color: #9B9B9B;
+  background-color: #003746;
   padding: 10px 25px;
   font-size: 18px;
   text-transform: uppercase;
@@ -2483,10 +2528,10 @@ count-area
 
 }
 .item-entry a {
-  color: #000;
+  color: #003746;
 }
 .item-entry a:hover ,.item-entry a:focus {
-  color: #999696;
+  color: #00A2DE;
 }
 .search-form .search-toggle {
   margin-top: 20px;
@@ -2700,7 +2745,7 @@ padding-bottom: 15px;
 }
 .error-page .error-title{
   font-size: 11em;
-  color: #FDC600;
+  color: #003746;
 }
 
 .fqa-title::before {

@@ -1,5 +1,6 @@
 package logica;
 
+import jakarta.persistence.Basic;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,8 +8,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -17,22 +24,35 @@ import java.util.Date;
  * @author kmilo
  */
 @Entity
+@Table(name = "USUARIO")
+@XmlRootElement
 public class Usuario implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "ID_USUARIO")
     private int idUsuario;
     
+    @Basic(optional = false)
+    @NotNull
+    @Email
+    @Column(name = "CORREO_ELECTRONICO")
     private String correoElectronico;
+    
+    @Basic(optional = false)
+    @NotBlank
+    @Size(min = 8, max = 20)
+    @Column(name = "PASSWORD")
     private String password;
     
     @Temporal(TemporalType.TIMESTAMP)//Define el tipo de fecha
-    @Column(name = "fechaRegistro", updatable = false, nullable = false)//Se nombra la columna, update false es para evitar que se actualice y evitar que sea null
+    @Column(name = "FECHA_REGISTRO", updatable = false, nullable = false)//Se nombra la columna, update false es para evitar que se actualice y evitar que sea null
     private Date fechaRegistro;
     
     
     //Define que un Usuario solo puede tener un empleado.
-    @OneToOne(mappedBy = "usuario")
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
     private Empleado empleado;
     
     //Define que un Usuarios solo puede tener un solo cliente.

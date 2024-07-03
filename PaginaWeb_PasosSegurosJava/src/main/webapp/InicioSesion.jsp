@@ -17,6 +17,10 @@
                     <a href="indexHome.jsp" class="arrow-back">&#8592;</a>
                 </div>
                 <div>
+                    <!--Este codigo se conecta con SvAuthenticacion donde trae la etiqueta error
+                        se crea una variable para guardar el resultado de la etiqueta, si la etiqueta 
+                        trae algun algun valor, se mostarara un texto en rojo, de lo contrario si esta
+                        vacio no se ejecutara nada-->
                 <% String errorMensaje = (String) request.getAttribute("error");
                     if(errorMensaje != null){
                         out.println("<p style='color: red;'>" + errorMensaje + "</p>");

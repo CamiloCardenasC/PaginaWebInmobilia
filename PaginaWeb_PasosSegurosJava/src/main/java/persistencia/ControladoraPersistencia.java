@@ -3,11 +3,13 @@ package persistencia;
 import logica.Cliente;
 import logica.Usuario;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
 /**
  *
  * @author kmilo
  */
+@Component
 public class ControladoraPersistencia {
     
     //Se instancian todas las Entity Class
@@ -27,6 +29,10 @@ public class ControladoraPersistencia {
 
     //Constructor vacio
     public ControladoraPersistencia() {
+    }
+    
+    public List<Cliente> getClientes() {
+        return clienJPA.findClienteEntities();
     }
     
     //Metodo para crear cliente

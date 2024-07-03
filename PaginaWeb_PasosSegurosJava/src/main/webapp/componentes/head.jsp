@@ -16,5 +16,6 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/font-awesome.min.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap-select.min.css"> 
         <link rel="stylesheet" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/css/lightslider.min.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style_All.css">
     </head>

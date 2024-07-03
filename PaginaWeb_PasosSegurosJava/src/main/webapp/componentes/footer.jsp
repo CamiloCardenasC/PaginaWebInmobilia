@@ -24,10 +24,10 @@
                                 <h4>Interes</h4>
                                 <div class="footer-title-line"></div>
                                 <ul class="footer-menu">
-                                    <li><a href="#">Propiedades</a>  </li> 
+                                    <li><a href="${pageContext.request.contextPath}/pagePropiedades.jsp">Propiedades</a>  </li> 
                                     <li><a href="#">Servicios</a>  </li> 
                                     <li><a href="#">Enviar Propiedad</a></li> 
-                                    <li><a href="#">Contáctenos</a></li> 
+                                    <li><a href="${pageContext.request.contextPath}/contacto.jsp">Contáctenos</a></li> 
                                     <li><a href="#">PQRS</a></li> 
                                     <li><a href="#">Terminos y condiciones</a></li> 
                                 </ul>
@@ -119,14 +119,14 @@
                 <div class="container">
                     <div class="row">
                         <div class="pull-left">
-                            <span> &#169 <a href="http://www.KimaroTec.com">Pasos Seguros</a> , All rights reserved 2024 </span> 
+                            <span> &#169<a href="${pageContext.request.contextPath}/indexHome.jsp">Pasos Seguros</a> , All rights reserved 2024 </span> 
                         </div> 
                         <div class="bottom-menu pull-right"> 
                             <ul> 
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.2s">Inicio</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.3s">Propiedades</a></li>
+                                <li><a class="wow fadeInUp animated" href="${pageContext.request.contextPath}/indexHome.jsp" data-wow-delay="0.2s">Inicio</a></li>
+                                <li><a class="wow fadeInUp animated" href="${pageContext.request.contextPath}/pagePropiedades.jsp" data-wow-delay="0.3s">Propiedades</a></li>
                                 <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.4s">PQRS</a></li>
-                                <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.6s">Contacto</a></li>
+                                <li><a class="wow fadeInUp animated" href="${pageContext.request.contextPath}/contacto.jsp" data-wow-delay="0.6s">Contacto</a></li>
                             </ul> 
                         </div>
                     </div>
@@ -138,5 +138,24 @@
         <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap-select.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap-hover-dropdown.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/lightslider.min.js"></script>
+        
+        <script>
+            $(document).ready(function () {
+
+                $('#image-gallery').lightSlider({
+                    gallery: true,
+                    item: 1,
+                    thumbItem: 9,
+                    slideMargin: 0,
+                    speed: 500,
+                    auto: true,
+                    loop: true,
+                    onSliderLoad: function () {
+                        $('#image-gallery').removeClass('cS-hidden');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>

@@ -1,5 +1,7 @@
 package logica;
 
+import jakarta.persistence.Basic;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,6 +10,12 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -23,16 +31,37 @@ public class Persona implements Serializable {
     
     @Id //@Id declara la propiedad identificadora de esta entidad
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "ID_PERSONA")
     private int idPersona;
     
+    @Basic(optional = false)
+    @Size(min = 3, max = 50) // Tamaño mínimo 3, máximo 50 caracteres
+    @Column(name = "NOMBRE")
     private String nombrePersona;
+    
+    @Basic(optional = false)
+    @Size(min = 3, max = 50) // Tamaño mínimo 3, máximo 50 caracteres
+    @Column(name = "APELLIDO")
     private String apellidosPersona;
     
+    @Past
     @Temporal(TemporalType.DATE)//Define el tipo de fecha 
     private Date fechaNacimiento;
     
+    @Pattern(regexp = "^[\\d\\+\\-\\(\\)]+$", message = "El formato del numero de telefono es incorrecto")
     private String telefonoPersona;
+    
+    @Basic(optional = false)
+    @NotNull // No puede ser nulo
+    @Email // Debe ser un formato de correo electrónico válido
+    @Column(name = "CORREO_ELECTRONICO")
     private String correoElectronico;
+    
+    @Basic(optional = false)
+    @NotBlank // No puede estar vacío ni solo contener espacios en blanco
+    @Size(min = 8, max = 20) // Tamaño mínimo 8, máximo 20 caracteres
+    @Column(name = "PASSWORD")
     private String password;
 
     //Constructor Vacio
