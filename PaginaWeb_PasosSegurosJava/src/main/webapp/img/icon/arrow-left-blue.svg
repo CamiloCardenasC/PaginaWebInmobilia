@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg width="32" height="52" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" class="arrow-container">
+ <g class="layer">
+  <title>Layer 1</title>
+  <g class="left-arrow" fill="#fff" id="svg_1">
+   <path d="m31.61,7.65l-6.79,-7.06l-24.43,25.4l6.79,7.06l24.43,-25.4z" fill="#00a2de" id="svg_2" opacity="0.5"/>
+   <path d="m0.39,26.01l6.79,-7.06l24.43,25.4l-6.79,7.06l-24.43,-25.4z" fill="#00a2de" id="svg_3"/>
+  </g>
+ </g>
+</svg>

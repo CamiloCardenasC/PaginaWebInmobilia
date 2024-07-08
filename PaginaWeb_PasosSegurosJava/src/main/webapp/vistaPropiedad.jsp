@@ -67,60 +67,62 @@
                                 <div class="section">
                                     <h4 class="s-property-title">Descripción</h4>
                                     <div class="s-property-content">
-                                        <p>Nulla quis dapibus nisl. Suspendisse ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies commodo arcu nec pretium. Nullam sed arcu ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies                                </p>
+                                        <p>
+                                            Esta propiedad de 200 metros cuadrados, ubicada en la exclusiva 
+                                            zona norte de Bogotá, ofrece 5 amplios dormitorios, 3 baños completos, 
+                                            garaje para 2 autos, espacios luminosos, acabados de alta calidad, zonas 
+                                            verdes y seguridad las 24 horas. Ideal para familias numerosas o quienes 
+                                            buscan un hogar cómodo y bien ubicado. ¡No pierdas la oportunidad de 
+                                            convertirla en tu nuevo hogar!
+                                        </p>
                                     </div>
                                 </div>
                                 <!-- Fin del area de la descripción  -->
 
                                 <div class="section additional-details">
 
-                                    <h4 class="s-property-title">Additional Details</h4>
+                                    <h4 class="s-property-title">Detalles adicionales</h4>
 
                                     <ul class="additional-details-list clearfix">
                                         <li>
-                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Waterfront</span>
-                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Yes</span>
+                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Localidad</span>
+                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Chapinero</span>
+                                        </li>
+                 
+                                        <li>
+                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Urbanización</span>
+                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Los Angeles 2/span>
                                         </li>
 
                                         <li>
-                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Built In</span>
+                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Época de Construcción</span>
                                             <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">2003</span>
                                         </li>
                                         <li>
-                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Parking</span>
-                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">2 Or More Spaces,Covered Parking,Valet Parking</span>
+                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Parqueadero</span>
+                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Espacio para dos automoviles, estacionamiento cubierto</span>
                                         </li>
 
                                         <li>
-                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Waterfront</span>
-                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Yes</span>
+                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Zona</span>
+                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Urbana</span>
                                         </li>
-
-                                        <li>
-                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">View</span>
-                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Intracoastal View,Direct ew</span>
-                                        </li>
-
-                                        <li>
-                                            <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Waterfront Description:</span>
-                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Intracoastal Front,Ocean Access</span>
-                                        </li> 
 
                                     </ul>
                                 </div>  
                                 <!-- Fin del area de detalles  -->
 
                                 <div class="section property-share"> 
-                                    <h4 class="s-property-title">Share width your friends </h4> 
+                                    <h4 class="s-property-title">Compartir con tus amigos </h4> 
                                     <div class="roperty-social">
                                         <ul> 
-                                            <li><a title="Share this on dribbble " href="#"><img src="assets/img/social_big/dribbble_grey.png"></a></li>                                         
-                                            <li><a title="Share this on facebok " href="#"><img src="assets/img/social_big/facebook_grey.png"></a></li> 
-                                            <li><a title="Share this on delicious " href="#"><img src="assets/img/social_big/delicious_grey.png"></a></li> 
-                                            <li><a title="Share this on tumblr " href="#"><img src="assets/img/social_big/tumblr_grey.png"></a></li> 
-                                            <li><a title="Share this on digg " href="#"><img src="assets/img/social_big/digg_grey.png"></a></li> 
-                                            <li><a title="Share this on twitter " href="#"><img src="assets/img/social_big/twitter_grey.png"></a></li> 
-                                            <li><a title="Share this on linkedin " href="#"><img src="assets/img/social_big/linkedin_grey.png"></a></li>                                        
+                                            <li><a title="Share this on facebok " href="https://www.facebook.com"><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></a></li>                                         
+                                            <li><a title="Share this on telegram " href="#"><i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i></a></li> 
+                                            <li><a title="Share this on instagram " href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li> 
+                                            <li><a title="Share this on google plus " href="#"><i class="fa fa-pinterest-square fa-3x" aria-hidden="true"></i></a></li> 
+                                            <li><a title="Share this on twitter " href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li> 
+                                            <li><a title="Share this on youtube " href="#"><i class="fa fa-youtube-square fa-3x" aria-hidden="true"></i></a></li> 
+                                            <li><a title="Share this on linkedin " href="#"><i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></a></li>                                        
                                         </ul>
                                     </div>
                                 </div>
@@ -142,27 +144,27 @@
 
                                             <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
                                                 <span class="property-info-icon icon-tag">                                                                                      
-                                                    <img src="${pageContext.request.contextPath}/img/icon/sale_blanco.png">
+                                                    <img src="${pageContext.request.contextPath}/img/icon/sale_blue.png">
                                                 </span>
                                                 <span class="property-info-entry">
                                                     <span class="property-info-label">Estado</span>
-                                                    <span class="property-info-value">En venta</span>
+                                                    <span class="property-info-value">En Venta</span>
                                                 </span>
                                             </div>
 
                                             <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
                                                 <span class="property-info icon-area">
-                                                    <img src="assets/img/icon/room-orange.png">
+                                                    <img src="${pageContext.request.contextPath}/img/icon/area_blue.png">
                                                 </span>
                                                 <span class="property-info-entry">
                                                     <span class="property-info-label">Area</span>
-                                                    <span class="property-info-value">200<b class="property-info-unit">M<sub>2</sub></b></span>
+                                                    <span class="property-info-value">200 <b class="property-info-unit">M<sub>2</sub></b></span>
                                                 </span>
                                             </div>
 
                                             <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
                                                 <span class="property-info-icon icon-bed">
-                                                    <img src="assets/img/icon/bed-orange.png">
+                                                    <img src="${pageContext.request.contextPath}/img/icon/habitacion_blue.png">
                                                 </span>
                                                 <span class="property-info-entry">
                                                     <span class="property-info-label">Dormitorios</span>
@@ -172,26 +174,17 @@
 
                                             <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
                                                 <span class="property-info-icon icon-bath">
-                                                    <img src="assets/img/icon/cars-orange.png">
+                                                    <img src="${pageContext.request.contextPath}/img/icon/baño_blue.png">
                                                 </span>
                                                 <span class="property-info-entry">
                                                     <span class="property-info-label">Baños</span>
                                                     <span class="property-info-value">2</span>
                                                 </span>
                                             </div>
-                                            <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
-                                                <span class="property-info-icon icon-bath">
-                                                    <img src="assets/img/icon/os-orange.png">
-                                                </span>
-                                                <span class="property-info-entry">
-                                                    <span class="property-info-label">Sala/Comedor</span>
-                                                    <span class="property-info-value">1</span>
-                                                </span>
-                                            </div>
 
                                             <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
                                                 <span class="property-info-icon icon-garage">
-                                                    <img src="assets/img/icon/room-orange.png">
+                                                    <img src="${pageContext.request.contextPath}/img/icon/Garaje_blue.png">
                                                 </span>
                                                 <span class="property-info-entry">
                                                     <span class="property-info-label">Garaje</span>
@@ -201,7 +194,7 @@
 
                                             <div class="col-xs-4 col-sm-4 col-md-4 p-b-15">
                                                 <span class="property-info-icon icon-garage">
-                                                    <img src="assets/img/icon/shawer-orange.png">
+                                                    <img src="${pageContext.request.contextPath}/img/icon/patio_blue.png">
                                                 </span>
                                                 <span class="property-info-entry">
                                                     <span class="property-info-label">Patio</span>

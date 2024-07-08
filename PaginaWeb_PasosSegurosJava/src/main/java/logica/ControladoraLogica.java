@@ -40,8 +40,7 @@ public class ControladoraLogica {
         return controlPersis.getUsuarios();
     }    
     
-   
-    
+  
     //Metodo de Autenticacion donde recibe dos parametros
     public boolean autenticarUsuario(String correoElectronico, String password) {
         

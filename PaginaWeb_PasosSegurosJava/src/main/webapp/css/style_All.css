@@ -1639,8 +1639,8 @@ padding: 0 0 0.5em;
 .color{
   color:#9B9B9B;
 }
-.orange{
-  color:orange;
+.blue{
+  color: #00A2DE;
 }
 .strong{
   font-weight: 500;
@@ -2016,11 +2016,11 @@ single property page
   overflow: hidden;
 }
 .single-property-content .lSAction > .lSNext {
-  background-image: url("../../assets/img/arrow-right.svg");
+  background-image: url("../img/icon/arrow-rigth-blue.svg");
   background-position: center center;
 }
 .single-property-content .lSAction > .lSPrev {
-  background-image: url("../../assets/img/arrow-left.svg");
+  background-image: url("../img/icon/arrow-left-blue.svg");
   background-position: center center;
 }
 
@@ -2084,12 +2084,12 @@ single property page
 }
 .s-property-title {
   margin-bottom: 15px;
-  color: #FFA500;
+  color: #005A7A;
   font-size: 18px;
 }
 
 .s-property-title::after {
-  background-color: #E5E6E7;
+  background-color: #005a7a;
   content: "";
   display: block;
   width: 30px;
@@ -2134,12 +2134,12 @@ single property page
 .add-d-title {
   font-weight: 600;
   text-transform: uppercase;
-  background-color: #A5A5A5;
+  background-color: #00A2DE;
   margin: 0px;
   color: #FFF;
 }
 .add-d-title:hover {
-  background-color: #727272;
+  background-color: #005A7A;
 }
 
 .sidebar-property{
@@ -2642,7 +2642,7 @@ padding-bottom: 15px;
 } 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: #FFF;
-  background-color: #FFC500;
+  background-color: #00A2DE;
 }
 .nav-pills > li > a {
   border-radius: 0px;

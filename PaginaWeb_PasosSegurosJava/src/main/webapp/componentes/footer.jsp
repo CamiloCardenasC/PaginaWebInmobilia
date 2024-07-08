@@ -138,7 +138,17 @@
         <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap-select.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap-hover-dropdown.js"></script>
+        <script src="${pageContext.request.contextPath}/js/easypiechart.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/jquery.easypiechart.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/wow.js"></script>
+        <script src="${pageContext.request.contextPath}/js/icheck.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/lightslider.min.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.bootstrap.wizard.js"></script>
+        <script src="${pageContext.request.contextPath}/js/jquery.validate.min.js"></script>
+        <script src="${pageContext.request.contextPath}/js/wizard.js"></script>
+        <script src="${pageContext.request.contextPath}/js/main.js"></script>
+        
         
         <script>
             $(document).ready(function () {

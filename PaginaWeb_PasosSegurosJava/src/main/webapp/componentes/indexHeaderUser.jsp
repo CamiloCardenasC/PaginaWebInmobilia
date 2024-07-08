@@ -32,7 +32,7 @@
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/perfilUsuario.jsp">
                                     <i class="fa fa-user" aria-hidden="true" style="padding: 8px"></i>
                                     Perfil
                                 </a>
@@ -40,7 +40,7 @@
                                     <i class="fa fa-cog" aria-hidden="true" style="padding: 8px"></i>
                                     Configuración
                                 </a>
-                                 <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="${pageContext.request.contextPath}/enviarPropiedad.jsp">
                                     <i class="fa fa-paper-plane" aria-hidden="true" style="padding: 8px"></i>
                                     Enviar propiedad
                                 </a>
