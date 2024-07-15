@@ -5,7 +5,7 @@
     <header class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header" style="width: 300px">
-                <a href="indexHome.html" class="navbar-brand"><img src="${pageContext.request.contextPath}/img/logo/Logo_Inmobiliaria.webp" alt="Logo_Inmobiliaria"></a>
+                <a href="${pageContext.request.contextPath}/indexHome.jsp" class="navbar-brand"><img src="${pageContext.request.contextPath}/img/logo/Logo_Inmobiliaria.webp" alt="Logo_Inmobiliaria"></a>
             </div>
 
             <div class="collapse navbar-collapse">

@@ -695,6 +695,48 @@ label small{
     width: 10px;
 }
 
+.navbar .navbar-right .dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.img-profile {
+    background-size: 32px 32px;
+    border: 0;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    margin-left: 5px;
+    height: 32px;
+    width: 32px;
+    
+}
+
+.dropdown-menu-right {
+    z-index: 1000;
+    right: 0;
+    left: auto;
+}
+
+.shadow {
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.animated--grow-in {
+    animation: grow-in 0.2s ease-in-out forwards;
+}
+
+@keyframes grow-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .navbar-default .navbar-nav > li > a{
   color: #003746;
   font-size: 16px;
@@ -1058,8 +1100,11 @@ svg{
 }
 
 .slider-area{
-  position: relative;
-  height: 630px
+  position: static;
+  height: 630px;
+  width: 100%;
+  overflow: auto;
+  z-index: 1000;
 }
 #bg-slider .item img{
   width: 100%;
@@ -1068,7 +1113,7 @@ svg{
 
 .slider-content{
   position: absolute;
-  top: 20%;
+  top: 7%;
   text-align: center;
   color: #FFF;
   width: 100%;

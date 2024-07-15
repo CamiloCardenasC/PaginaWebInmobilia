@@ -19,6 +19,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
                         <h2>Donde tus sueños encuentran un hogar</h2>
+                        
                         <p><strong>Juntos convertiremos tus sueños en realidad</strong></p>
                     
                         <div class="search-form wow pulse" data-wow-delay="0.8s">

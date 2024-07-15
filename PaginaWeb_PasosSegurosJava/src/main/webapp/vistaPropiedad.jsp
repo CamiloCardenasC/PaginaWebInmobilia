@@ -26,7 +26,7 @@
         <div class="content-area single-property" style="background-color: #FCFCFC;">&nbsp;
             <div class="container">   
 
-                <div class="clearfix padding-top-40" >
+                <div class="clearfix padding-top-40">
 
                     <div class="col-md-8 single-property-content prp-style-2">
                         <div class="">
@@ -44,7 +44,7 @@
 
                                         <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
                                             <li data-thumb="${pageContext.request.contextPath}/img/interiorCasa/salaCasa.jpg"> 
-                                                <img src="${pageContext.request.contextPath}/img/interiorCasa/salaCasa.jpg" />
+                                                <img src="${pageContext.request.contextPath}/img/interiorCasa/salaCasa.jpg"/>
                                             </li>
                                             <li data-thumb="${pageContext.request.contextPath}/img/interiorCasa/cocina.jpg"> 
                                                 <img src="${pageContext.request.contextPath}/img/interiorCasa/cocina.jpg" />
@@ -53,10 +53,10 @@
                                                 <img src="${pageContext.request.contextPath}/img/interiorCasa/habitacion.jpg" />
                                             </li>
                                             <li data-thumb="${pageContext.request.contextPath}/img/interiorCasa/habitacionSencilla.jpg"> 
-                                                <img src="${pageContext.request.contextPath}/img/interiorCasa/habitacionSencilla.jpg" />
+                                                <img src="${pageContext.request.contextPath}/img/interiorCasa/habitacionSencilla.jpg"/>
                                             </li>
                                             <li data-thumb="${pageContext.request.contextPath}/img/interiorCasa/baño.jpg"> 
-                                                <img src="${pageContext.request.contextPath}/img/interiorCasa/baño.jpg" />
+                                                <img src="${pageContext.request.contextPath}/img/interiorCasa/baño.jpg"/>
                                             </li>
                                         </ul>
                                     </div>
@@ -91,7 +91,7 @@
                  
                                         <li>
                                             <span class="col-xs-6 col-sm-4 col-md-4 add-d-title">Urbanización</span>
-                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Los Angeles 2/span>
+                                            <span class="col-xs-6 col-sm-8 col-md-8 add-d-entry">Los Angeles 2</span>
                                         </li>
 
                                         <li>
@@ -261,7 +261,7 @@
                                     <h3 class="panel-title">Anuncios </h3>
                                 </div>
                                 <div class="panel-body recent-property-widget">
-                                    <img src="assets/img/ads.jpg">
+                                    <img src="${pageContext.request.contextPath}/img/ads.jpg">
                                 </div>
                             </div>
                            

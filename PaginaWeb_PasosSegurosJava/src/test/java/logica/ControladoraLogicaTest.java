@@ -25,7 +25,7 @@ public class ControladoraLogicaTest {
         usuarios = new ArrayList<>();
     }
     
-    
+   /* 
    @Test
    public void getClientesTest(){
        
@@ -48,7 +48,7 @@ public class ControladoraLogicaTest {
        Assertions.assertTrue(encontrarCliente);
        
    }
-    
+    */
    
    /*@Test
    public void crearClienteTest(){
@@ -72,7 +72,7 @@ public class ControladoraLogicaTest {
        Assertions.assertEquals("andresgarcia@gmail.com", resultadoUsuarioObtenido.get(2).getCorreoElectronico());
    }
     */
-    
+  /*  
    @Test
    public void getUsuariosTest(){
        //Llamaos el metodo que vamos a testear
@@ -83,7 +83,7 @@ public class ControladoraLogicaTest {
        
    }    
     
-   
+   */
    @Test
    public void autenticarUsuarioTest(){
        

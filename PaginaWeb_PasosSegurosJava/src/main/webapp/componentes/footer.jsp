@@ -26,7 +26,7 @@
                                 <ul class="footer-menu">
                                     <li><a href="${pageContext.request.contextPath}/pagePropiedades.jsp">Propiedades</a>  </li> 
                                     <li><a href="#">Servicios</a>  </li> 
-                                    <li><a href="#">Enviar Propiedad</a></li> 
+                                    <li><a href="${pageContext.request.contextPath}/enviarPropiedad.jsp">Enviar Propiedad</a></li> 
                                     <li><a href="${pageContext.request.contextPath}/contacto.jsp">Contáctenos</a></li> 
                                     <li><a href="#">PQRS</a></li> 
                                     <li><a href="#">Terminos y condiciones</a></li> 
@@ -69,7 +69,7 @@
                                     <li>
                                         <div class="col-md-3 col-sm-4 col-xs-4 blg-thumb p0">
                                             <a href="single.html">
-                                                <img src="${pageContext.request.contextPath}/img/OpcionesCasas/AlquilerCasa4.jpg">
+                                                <img src="${pageContext.request.contextPath}/img/opcionesCasas/casaArriendo1.jpg">
                                             </a>
                                             <span class="blg-date">17-05-2024</span>
 
@@ -119,7 +119,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="pull-left">
-                            <span> &#169<a href="${pageContext.request.contextPath}/indexHome.jsp">Pasos Seguros</a> , All rights reserved 2024 </span> 
+                            <span> &#169 <a href="${pageContext.request.contextPath}/indexHome.jsp">Pasos Seguros</a> , All rights reserved 2024 </span> 
                         </div> 
                         <div class="bottom-menu pull-right"> 
                             <ul> 
@@ -135,6 +135,7 @@
         </footer>
 
         <script src="${pageContext.request.contextPath}/js/jquery-1.10.2.min.js"></script>
+       <script src="${pageContext.request.contextPath}/js/jquery.validate.min.js"></script>
         <script src="${pageContext.request.contextPath}/bootstrap/js/bootstrap.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap-select.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/bootstrap-hover-dropdown.js"></script>
@@ -143,17 +144,16 @@
         <script src="${pageContext.request.contextPath}/js/owl.carousel.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/wow.js"></script>
         <script src="${pageContext.request.contextPath}/js/icheck.min.js"></script>
-        <script type="text/javascript" src="${pageContext.request.contextPath}/js/lightslider.min.js"></script>
         <script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery.bootstrap.wizard.js"></script>
-        <script src="${pageContext.request.contextPath}/js/jquery.validate.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/wizard.js"></script>
+        <script src="${pageContext.request.contextPath}/js/price-range.js"></script>
+        <script type="text/javascript" src="${pageContext.request.contextPath}/js/lightslider.min.js"></script>
         <script src="${pageContext.request.contextPath}/js/main.js"></script>
-        
-        
+
+        <!-- Inicialización de LightSlider -->
         <script>
             $(document).ready(function () {
-
-                $('#image-gallery').lightSlider({
+                $("#image-gallery").lightSlider({
                     gallery: true,
                     item: 1,
                     thumbItem: 9,
@@ -162,7 +162,7 @@
                     auto: true,
                     loop: true,
                     onSliderLoad: function () {
-                        $('#image-gallery').removeClass('cS-hidden');
+                        $("#image-gallery").removeClass("cS-hidden");
                     }
                 });
             });
