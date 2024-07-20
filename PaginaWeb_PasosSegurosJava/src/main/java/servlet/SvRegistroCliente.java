@@ -5,12 +5,20 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 import logica.Cliente;
 import logica.ControladoraLogica;
 import logica.Usuario;
+import org.apache.commons.io.IOUtils;
 import org.mindrot.jbcrypt.BCrypt;
 
 
@@ -22,6 +30,7 @@ import org.mindrot.jbcrypt.BCrypt;
 public class SvRegistroCliente extends HttpServlet {
 
     ControladoraLogica control = new ControladoraLogica();
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     }
@@ -36,7 +45,7 @@ public class SvRegistroCliente extends HttpServlet {
         
     }
 
-   
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -77,14 +86,42 @@ public class SvRegistroCliente extends HttpServlet {
         cliente.setPassword(hashedPassword);
         cliente.setUsuario(usu);
         
+        // Generar un nombre único para la foto predeterminada
+        String uniqueFileName = UUID.randomUUID().toString() + "_foto_predeterminada.jpg";
+
+        // Ruta de la foto predeterminada en el sistema de archivos
+        String sourcePath = "C:\\Users\\kmilo\\Documents\\PRIMER_PROYECTO_SOFTWARE\\PaginaWeb_PasosSegurosJava\\src\\main\\webapp\\img\\foto_predeterminada.jpg";
+
+        // Ruta de la carpeta donde se guardarán las fotos
+        String uploadPath = getServletContext().getRealPath("") + File.separator + "uploads";
+
+        // Crear la carpeta si no existe
+        File uploadDir = new File(uploadPath);
+        if (!uploadDir.exists()) {
+            uploadDir.mkdirs();
+        }
+
+        // Copiar la foto predeterminada a la nueva ubicación con un nombre único
+        File sourceFile = new File(sourcePath);
+        File destFile = new File(uploadPath + File.separator + uniqueFileName);
+        try (InputStream inputStream = new FileInputStream(sourceFile)) {
+            Files.copy(inputStream, destFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new ServletException("Error al guardar la foto predeterminada", e);
+        }
+
+        // Asignar el nombre de archivo de la foto al cliente
+        cliente.setFotoPerfil(uniqueFileName);
+        
         //Persistir el cliente y el usuario
         control.crearCliente(cliente);
         
         //Se redirije a la pagina de Inicio
         response.sendRedirect("inicioSesion.jsp");
     }
-
-   
+    
+    
     @Override
     public String getServletInfo() {
         return "Short description";

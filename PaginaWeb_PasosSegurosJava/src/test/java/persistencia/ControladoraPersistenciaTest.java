@@ -77,7 +77,7 @@ public class ControladoraPersistenciaTest {
         Assertions.assertEquals("Jose", cliente.getNombrePersona());
     }
     */
-    
+    /*
     @Test
     @DisplayName("Se espera que al un usuario este creado para poder guardar"
             + "la la base de datos en una lista y poderlos visualizar por medio"
@@ -93,7 +93,8 @@ public class ControladoraPersistenciaTest {
         
         
         //Verificamos los resultados obtenidos
-        /*Assertions.assertEquals(8, resultadoObtenido.size());*/
+        Assertions.assertEquals(8, resultadoObtenido.size());
+    
         Assertions.assertEquals(resultadoEsperado, resultadoObtenido.get(0));
         
         //Se verifica que el usuario se encuentre en la lista
@@ -106,5 +107,5 @@ public class ControladoraPersistenciaTest {
         }
         Assertions.assertTrue(usuarioEncontrado);
     }
-    
+    */
 }

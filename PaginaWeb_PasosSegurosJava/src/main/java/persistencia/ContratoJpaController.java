@@ -34,11 +34,11 @@ public class ContratoJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-    
+
     public ContratoJpaController(){
         emf = Persistence.createEntityManagerFactory("PaginaWeb_PasosSeguros_PU");
     }
-
+    
     public void create(Contrato contrato) {
         EntityManager em = null;
         try {

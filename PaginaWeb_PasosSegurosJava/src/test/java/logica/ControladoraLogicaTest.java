@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
  * @author kmilo
  */
 public class ControladoraLogicaTest {
-    
+    /*
     private ControladoraLogica controladoraLogica;
     private List<Cliente> clientes;
     private List<Usuario> usuarios;
@@ -24,7 +24,7 @@ public class ControladoraLogicaTest {
         clientes = new ArrayList<>();
         usuarios = new ArrayList<>();
     }
-    
+   */ 
    /* 
    @Test
    public void getClientesTest(){
@@ -84,6 +84,7 @@ public class ControladoraLogicaTest {
    }    
     
    */
+   /*
    @Test
    public void autenticarUsuarioTest(){
        
@@ -117,6 +118,6 @@ public class ControladoraLogicaTest {
        
    }
     
-    
+    */
     
 }

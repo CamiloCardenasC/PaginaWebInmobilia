@@ -30,11 +30,11 @@ public class ClienteJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-    
+
     public ClienteJpaController(){
         emf = Persistence.createEntityManagerFactory("PaginaWeb_PasosSeguros_PU");
     }
-
+    
     public void create(Cliente cliente) {
     if (cliente.getReservacion() == null) {
         cliente.setReservacion(new ArrayList<Reservacion>());
@@ -42,6 +42,7 @@ public class ClienteJpaController implements Serializable {
     if (cliente.getContrato() == null) {
         cliente.setContrato(new ArrayList<Contrato>());
     }
+
     EntityManager em = null;
     try {
         em = getEntityManager();

@@ -44,4 +44,9 @@ public class ControladoraPersistencia {
     public List<Usuario> getUsuarios(){
         return usuaJPA.findUsuarioEntities();
     }
+    
+    //Metodo para editar información Cliente
+    public void editCliente(Cliente cliente) throws Exception{
+        clienJPA.edit(cliente);
+    }
 }

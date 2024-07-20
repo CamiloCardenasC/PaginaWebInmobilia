@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package persistencia;
 
 import jakarta.persistence.EntityManager;
@@ -27,11 +31,11 @@ public class EstadoInmuebleJpaController implements Serializable {
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
-    
+
     public EstadoInmuebleJpaController(){
         emf = Persistence.createEntityManagerFactory("PaginaWeb_PasosSeguros_PU");
     }
-
+    
     public void create(EstadoInmueble estadoInmueble) {
         EntityManager em = null;
         try {

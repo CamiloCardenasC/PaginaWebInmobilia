@@ -24,7 +24,7 @@
                                         </c:choose>
                                         
                                     </strong></span>
-                                <img src="${pageContext.request.contextPath}/img/perfil-predeterminado.png" class="img-profile rounded-circle" width="32" height="32">
+                                <img src="<%=request.getContextPath() %>/SvPerfilUsuario?fotoPerfil=true" class="img-profile rounded-circle" width="32" height="32">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

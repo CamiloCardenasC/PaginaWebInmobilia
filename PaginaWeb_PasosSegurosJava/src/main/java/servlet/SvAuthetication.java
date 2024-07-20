@@ -9,7 +9,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import jakarta.validation.Validator;
 import logica.Cliente;
 import logica.ControladoraLogica;
 import org.owasp.encoder.Encode;
@@ -23,8 +22,6 @@ public class SvAuthetication extends HttpServlet {
 
     private ControladoraLogica control = new ControladoraLogica();
     
-    @Inject
-    private Validator validator;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

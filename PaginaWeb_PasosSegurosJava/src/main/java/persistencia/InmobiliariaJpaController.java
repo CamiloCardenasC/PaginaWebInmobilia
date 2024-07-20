@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package persistencia;
 
 import jakarta.persistence.EntityManager;
@@ -14,7 +18,6 @@ import java.util.List;
 import logica.Contrato;
 import logica.Inmobiliaria;
 import persistencia.exceptions.NonexistentEntityException;
-import persistencia.exceptions.PreexistingEntityException;
 
 /**
  *
@@ -34,8 +37,8 @@ public class InmobiliariaJpaController implements Serializable {
     public InmobiliariaJpaController(){
         emf = Persistence.createEntityManagerFactory("PaginaWeb_PasosSeguros_PU");
     }
-
-    public void create(Inmobiliaria inmobiliaria) throws PreexistingEntityException, Exception {
+    
+    public void create(Inmobiliaria inmobiliaria) {
         if (inmobiliaria.getEmpleado() == null) {
             inmobiliaria.setEmpleado(new ArrayList<Empleado>());
         }
@@ -78,11 +81,6 @@ public class InmobiliariaJpaController implements Serializable {
                 }
             }
             em.getTransaction().commit();
-        } catch (Exception ex) {
-            if (findInmobiliaria(inmobiliaria.getIdInmobiliaria()) != null) {
-                throw new PreexistingEntityException("Inmobiliaria " + inmobiliaria + " already exists.", ex);
-            }
-            throw ex;
         } finally {
             if (em != null) {
                 em.close();

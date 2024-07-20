@@ -1,6 +1,13 @@
+<%@page import="logica.Cliente"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="/componentes/head.jsp" %>
+
+    <%
+        Cliente usuario = (Cliente) session.getAttribute("usuario");
+        
+    %>
 
 <c:choose>
     <c:when test="${not empty sessionScope.usuario}">
@@ -38,7 +45,7 @@
                 <div class="row">
                     <div class="col-sm-10 col-sm-offset-1 profiel-container" style="color: #005A7A;">
 
-                        <form action="" method="get">
+                        <form action="SvPerfilUsuario" method="POST" enctype="multipart/form-data">
                             <div class="profiel-header">
                                 <h3 style="color: #00A2DE;">
                                     <b style="color: #005A7A;">MEJORA</b> TU PERFIL <br>
@@ -48,11 +55,12 @@
                             </div>
 
                             <div class="clear">
-                                <div class="col-sm-3 col-sm-offset-1">
+                                <div class="col-sm-4 col-sm-offset-1">
                                     <div class="picture-container">
                                         <div class="picture">
-                                            <img src="assets/img/avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
-                                            <input type="file" id="wizard-picture">
+                                            
+                                            <img src="SvPerfilUsuario" class="picture-src" id="wizardPicturePreview" title="" alt="Foto de perfil"/>     
+                                            <input type="file" id="wizard-picture" name="fotoPerfil">
                                         </div>
                                         <h6>Elegir una foto</h6>
                                     </div>
@@ -61,26 +69,35 @@
                                 <div class="col-sm-3 padding-top-25">
 
                                     <div class="form-group">
-                                        <label>Nombre/s </label>
-                                        <input name="firstname" type="text" class="form-control" placeholder="">
+                                        <label for="nombreCliente">Nombre/s </label>
+                                        <input name="nombreCliente" type="text" class="form-control" value="${usuario != null ? usuario.getNombrePersona() : ''}">
                                     </div>
                                     <div class="form-group">
-                                        <label>Apellidos </label>
-                                        <input name="lastname" type="text" class="form-control" placeholder="">
+                                        <label for="apellidosCliente">Apellidos </label>
+                                        <input name="apellidosCliente" type="text" class="form-control" value="${usuario != null ? usuario.getApellidosPersona() : ''}">
                                     </div> 
                                     <div class="form-group">
-                                        <label>Correo electronico </label>
-                                        <input name="email" type="email" class="form-control" placeholder="">
+                                        <label for="emailCliente">Correo electronico </label>
+                                        <input name="emailCliente" type="email" class="form-control" readonly value="${usuario != null ? usuario.getCorreoElectronico() : ''}">
                                     </div> 
                                 </div>
                                 <div class="col-sm-3 padding-top-25">
                                     <div class="form-group">
-                                        <label>Contraseña <small>(required)</small></label>
-                                        <input name="Password" type="password" class="form-control">
+                                        <label for="fechaNacimientoCliente">Fecha de nacimiento </label>
+                                        
+                                        <input name="fechaNacimientoCliente" type="text" class="form-control" readonly
+                                               value="<fmt:formatDate value='${usuario.getFechaNacimiento()}' pattern='dd-MM-yyyy'/>">
+                                               
+                                       
+                                        
                                     </div>
                                     <div class="form-group">
-                                        <label>Confirmar contraseña : <small>(required)</small></label>
-                                        <input type="password" class="form-control">
+                                        <label for="telefonoCliente">Telefono </label>
+                                        <input name="telefonoCliente" type="tel" class="form-control" value="${usuario != null ? usuario.getTelefonoPersona() : ''}">
+                                    </div>
+                                    <div class="col-sm-5 col-sm-offset-1">
+                                        <br>
+                                        <input type='button' class='btn btn-finish btn-primary' name='Cambiar contraseña' value='Cambiar contraseña' />
                                     </div>
                                 </div>  
 
@@ -92,31 +109,23 @@
                                 <br>
                                 <div class="col-sm-5 col-sm-offset-1">
                                     <div class="form-group">
-                                        <label>Facebook :</label>
-                                        <input name="Facebook" type="text" class="form-control" placeholder="https://facebook.com/user">
+                                        <label for="facebook">Facebook :</label>
+                                        <input name="facebook" type="text" class="form-control" placeholder="https://facebook.com/user" value="${usuario != null ? usuario.getFacebook() : ''}">
                                     </div>
                                     <div class="form-group">
-                                        <label>Twitter :</label>
-                                        <input name="Twitter" type="text" class="form-control" placeholder="https://Twitter.com/@user">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Sitio Web :</label>
-                                        <input name="website" type="text" class="form-control" placeholder="https://yoursite.com/">
+                                        <label for="twitter">Twitter :</label>
+                                        <input name="twitter" type="text" class="form-control" placeholder="https://Twitter.com/@user" value="${usuario != null ? usuario.getTwitter() : ''}">
                                     </div>
                                 </div>  
 
                                 <div class="col-sm-5">
                                     <div class="form-group">
-                                        <label>Correo electronico Publico :</label>
-                                        <input name="p-email" type="email" class="form-control" placeholder="p-email@rmail.com">
+                                        <label for="p-email">Correo electronico Publico :</label>
+                                        <input name="p-email" type="email" class="form-control" placeholder="p-email@gmail.com" value="${usuario != null ? usuario.getCorreoPublico() : ''}">
                                     </div>
                                     <div class="form-group">
-                                        <label>Telefono :</label>
-                                        <input name="Phone" type="text" class="form-control" placeholder="+1 9090909090">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>FAX :</label>
-                                        <input name="FAX" type="text" class="form-control" placeholder="+1 9090909090">
+                                        <label for="telefonoPub">Telefono Público :</label>
+                                        <input name="telefonoPub" type="tel" class="form-control" placeholder="+57 300 900 9000" value="${usuario != null ? usuario.getTelefonoPublico() : ''}">
                                     </div>
                                 </div>
  
@@ -124,7 +133,8 @@
                     
                             <div class="col-sm-5 col-sm-offset-1">
                                 <br>
-                                <input type='button' class='btn btn-finish btn-primary' name='finish' value='Guardar' />
+                                <button type="submit" class='btn btn-finish btn-primary' name="guardar">Guardar cambios</button>
+                               
                             </div>
                             <br>
                     </form>

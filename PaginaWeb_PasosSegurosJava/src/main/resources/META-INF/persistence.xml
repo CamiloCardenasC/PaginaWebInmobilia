@@ -3,7 +3,6 @@
   <persistence-unit name="PaginaWeb_PasosSeguros_PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>logica.Cargo</class>
-    <class>logica.Cliente</class>
     <class>logica.Contrato</class>
     <class>logica.Empleado</class>
     <class>logica.EstadoInmueble</class>
@@ -15,6 +14,7 @@
     <class>logica.TipoContrato</class>
     <class>logica.TipoInmueble</class>
     <class>logica.Usuario</class>
+    <class>logica.Cliente</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/db_pagina_pasos_seguros?serverTimezone=UTC"/>

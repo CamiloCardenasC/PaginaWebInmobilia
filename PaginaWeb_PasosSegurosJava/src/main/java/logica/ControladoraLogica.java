@@ -28,9 +28,17 @@ public class ControladoraLogica {
         Usuario usu = new Usuario();
         usu.setCorreoElectronico(cliente.getCorreoElectronico());// Se usa el correo como nombre de usuario
         usu.setPassword(cliente.getPassword()); //La contraseña del usuario es la misma que la del cliente
+
+        
         
         //Se asocia el cliente con el Usuario
         cliente.setUsuario(usu);
+        
+        //se le asigna una foto de perfil predeterminada
+        if (cliente.getFotoPerfil() == null || cliente.getFotoPerfil().isEmpty()) {
+            cliente.setFotoPerfil("/img/foto_predeterminada.jpg");
+        }
+        
         controlPersis.crearCliente(cliente);//Se ingresa al controlPersistencia para ingrear al metodo create
     }
 
@@ -65,5 +73,10 @@ public class ControladoraLogica {
                 .findFirst()
                 .orElse(null); // Si no se encuentra un cliente que coincida, devolver null
                 
+    }
+    
+    //metodo para editar informacion cliente 
+    public void editarCliente(Cliente cliente) throws Exception{
+        controlPersis.editCliente(cliente);
     }
 }
